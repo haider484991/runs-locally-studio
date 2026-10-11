@@ -46,7 +46,7 @@ ${list(shorts)}
 ];
 `;
 const path = 'src/registry.ts';
-if (!existsSync(path) || readFileSync(path, 'utf8') !== registry) {
+if (!existsSync(path) || readFileSync(path, 'utf8').replace(/\r\n/g, '\n') !== registry) {   // a Windows checkout may have CRLF
   writeFileSync(path, registry);
   console.log(`src/registry.ts: ${videos.length} video(s), ${shorts.length} Short(s)`);
 }
