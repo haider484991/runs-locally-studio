@@ -24,7 +24,7 @@ This is the engine behind the [Runs Locally](https://www.youtube.com/@RunsLocall
 
 ## Quick start
 
-You need **Node.js 20+**, **Python 3.10–3.12**, **ffmpeg** on your PATH and **espeak-ng** (Kokoro's fallback for words it does not know; on Windows the default install folder is found automatically, macOS `brew install espeak-ng`, Linux `apt install espeak-ng`). Disk: about 1.5 GB in total — `node_modules` ~350 MB, Remotion's headless Chrome ~115 MB, whisper.cpp + the small.en model ~490 MB, the Kokoro model ~315 MB (both models download on first use).
+You need **Node.js 20+**, **Python 3.10–3.12**, **ffmpeg** on your PATH and **espeak-ng** (Kokoro's fallback for words it does not know; on Windows the default install folder is found automatically, macOS `brew install espeak-ng`, Linux `apt install espeak-ng`). Disk: about 1.5 GB in total — `node_modules` ~730 MB once Remotion has unpacked its headless Chrome on the first render (~270 MB of that), whisper.cpp + the small.en model ~490 MB, the Kokoro model ~315 MB (both models download on first use).
 
 ```bash
 git clone https://github.com/haider484991/runs-locally-studio
