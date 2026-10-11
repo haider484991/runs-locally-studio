@@ -12,6 +12,7 @@ import { bundle } from '@remotion/bundler';
 import { renderStill, selectComposition } from '@remotion/renderer';
 import { estimateWords, resolveAt } from './lib/cues.mjs';
 import { chromiumOptions } from './lib/render-options.mjs';
+import { removeBundle } from './lib/bundle.mjs';
 
 const [slug, list, ...rest] = process.argv.slice(2);
 const only = rest.filter((a) => /^b\d+$/.test(a));                       // beat ids after --cues, e.g.  --cues b03 b05
@@ -59,3 +60,5 @@ for (const f of frames) {
   await renderStill({ composition: comp, serveUrl, frame: Math.min(f, comp.durationInFrames - 1), output: out, chromiumOptions });
   console.log('  ' + out);
 }
+
+removeBundle(serveUrl);

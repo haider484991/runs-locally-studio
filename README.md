@@ -58,6 +58,13 @@ node scripts/make.mjs my-first-video
 
 Then **look at it**: watch the MP4 and open every contact sheet. A pipeline that finishes is not a video that explains.
 
+### Use it with Claude Code
+
+The repo ships a [Claude Code](https://www.anthropic.com/claude-code) skill, [`.claude/skills/make-explainer-video`](.claude/skills/make-explainer-video/SKILL.md).
+Open the repo in Claude Code and ask for a video ("make an explainer about how a hash map works, with a real run"): the skill tells
+Claude to collect real evidence first, build the script from it, look at the stills, run the pipeline and the checks, and report
+what it did and did not verify. It is how the Runs Locally videos are made.
+
 ## How a scene works
 
 A video is a list of beats. Each beat has the words the voice says and a visual. This is the code beat of `content/hello-world` (shortened):
@@ -121,6 +128,7 @@ public/<slug>/         generated: staged script, voiced audio, timings (git-igno
 out/                   generated: videos, thumbnails, captions, contact sheets (git-ignored)
 src/                   Remotion: Video.tsx, Short.tsx, Thumb.tsx, scenes/, explain/ (lesson scenes), kit/, heroes/ (one-off scenes)
 scripts/               the pipeline (see above) and its tests (npm test)
+.claude/skills/        the Claude Code skill that drives the pipeline
 docs/                  gates.md (the checks), design.md (the visual system)
 ```
 

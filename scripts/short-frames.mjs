@@ -8,6 +8,7 @@ import path from 'node:path';
 import fs from 'node:fs';
 import { bundle } from '@remotion/bundler';
 import { renderStill, selectComposition } from '@remotion/renderer';
+import { removeBundle } from './lib/bundle.mjs';
 
 const [slug, list, outArg] = process.argv.slice(2);
 if (!slug || !list) { console.error('usage: node scripts/short-frames.mjs <slug> <frame,...>|--beats [outDir]'); process.exit(2); }
@@ -28,3 +29,4 @@ for (const f of frames) {
   await renderStill({ composition: comp, serveUrl, frame: Math.min(f, comp.durationInFrames - 1), output: out, imageFormat: 'png' });
   console.log(' ', out);
 }
+removeBundle(serveUrl);
