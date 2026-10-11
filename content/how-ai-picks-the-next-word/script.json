@@ -1,0 +1,2390 @@
+{
+  "version": 2,
+  "format": "guide",
+  "endScreenSeconds": 8,
+  "slug": "how-ai-picks-the-next-word",
+  "title": "How Does AI Pick the Next Word? The Real Scores Inside a Local AI (Qwen 3.5)",
+  "mood": {
+    "palette": "violet",
+    "backdrop": "grid",
+    "type": "grotesk",
+    "transition": "iris",
+    "shapes": "glass",
+    "texture": "none"
+  },
+  "thumb": {
+    "kicker": "AI BASICS . NEXT WORD",
+    "hero": {
+      "value": "30%",
+      "label": "YOUNG"
+    },
+    "headline": "HOW AI PICKS\nTHE NEXT WORD",
+    "verdict": "REAL SCORES"
+  },
+  "beats": [
+    {
+      "id": "b01",
+      "movement": "open",
+      "purpose": "answer",
+      "evidenceIds": [
+        "e-greedy"
+      ],
+      "narration": "Once upon a time, there was a... what comes next? The AI does not know yet. First it gives a score to every chip it could write next. Then it picks one, adds it to the sentence, and does the whole thing again. That loop is how an AI writes.",
+      "visual": {
+        "type": "explain",
+        "scene": "nextword",
+        "title": "How an AI picks the next word",
+        "badge": "Real scores · Qwen 3.5",
+        "source": "Measured . qwen3.5:4b, Ollama 0.40.2, RTX 3050 Laptop 4 GB; plain text, no chat wrapper; scores = Ollama's logprobs as percent, top 5 of the next chip",
+        "data": {
+          "prompt": "Once upon a time, there was a",
+          "steps": [
+            {
+              "chosen": " young",
+              "top": [
+                {
+                  "text": " young",
+                  "p": 29.6
+                },
+                {
+                  "text": " little",
+                  "p": 16.9
+                },
+                {
+                  "text": " curious",
+                  "p": 13.7
+                },
+                {
+                  "text": " very",
+                  "p": 8.5
+                },
+                {
+                  "text": " group",
+                  "p": 6.7
+                }
+              ]
+            },
+            {
+              "chosen": " adventurer",
+              "top": [
+                {
+                  "text": " adventurer",
+                  "p": 20.8
+                },
+                {
+                  "text": " boy",
+                  "p": 14.4
+                },
+                {
+                  "text": " student",
+                  "p": 13.9
+                },
+                {
+                  "text": " and",
+                  "p": 10.6
+                },
+                {
+                  "text": " girl",
+                  "p": 6.2
+                }
+              ]
+            },
+            {
+              "chosen": " named",
+              "top": [
+                {
+                  "text": " named",
+                  "p": 99.7
+                },
+                {
+                  "text": " who",
+                  "p": 0.2
+                },
+                {
+                  "text": " called",
+                  "p": 0
+                },
+                {
+                  "text": " in",
+                  "p": 0
+                },
+                {
+                  "text": ",",
+                  "p": 0
+                }
+              ]
+            },
+            {
+              "chosen": " Lily",
+              "top": [
+                {
+                  "text": " Lily",
+                  "p": 29.7
+                },
+                {
+                  "text": " Alex",
+                  "p": 23
+                },
+                {
+                  "text": " Tom",
+                  "p": 19.9
+                },
+                {
+                  "text": " Jack",
+                  "p": 14.3
+                },
+                {
+                  "text": " Tim",
+                  "p": 6.5
+                }
+              ]
+            },
+            {
+              "chosen": ".",
+              "top": [
+                {
+                  "text": ".",
+                  "p": 61.9
+                },
+                {
+                  "text": " who",
+                  "p": 37.3
+                },
+                {
+                  "text": ",",
+                  "p": 0.4
+                },
+                {
+                  "text": " in",
+                  "p": 0.1
+                },
+                {
+                  "text": "!",
+                  "p": 0.1
+                }
+              ]
+            },
+            {
+              "chosen": " Lily",
+              "top": [
+                {
+                  "text": " Lily",
+                  "p": 74.7
+                },
+                {
+                  "text": " One",
+                  "p": 22.4
+                },
+                {
+                  "text": " She",
+                  "p": 1.5
+                },
+                {
+                  "text": " In",
+                  "p": 0.5
+                },
+                {
+                  "text": "\n",
+                  "p": 0.4
+                }
+              ]
+            },
+            {
+              "chosen": " loved",
+              "top": [
+                {
+                  "text": " loved",
+                  "p": 57
+                },
+                {
+                  "text": " was",
+                  "p": 23.9
+                },
+                {
+                  "text": " had",
+                  "p": 11.6
+                },
+                {
+                  "text": " lived",
+                  "p": 6.1
+                },
+                {
+                  "text": " always",
+                  "p": 0.3
+                }
+              ]
+            },
+            {
+              "chosen": " to",
+              "top": [
+                {
+                  "text": " to",
+                  "p": 58.1
+                },
+                {
+                  "text": " exploring",
+                  "p": 26.7
+                },
+                {
+                  "text": " all",
+                  "p": 2.9
+                },
+                {
+                  "text": " learning",
+                  "p": 2.2
+                },
+                {
+                  "text": " math",
+                  "p": 2
+                }
+              ]
+            },
+            {
+              "chosen": " explore",
+              "top": [
+                {
+                  "text": " explore",
+                  "p": 74.6
+                },
+                {
+                  "text": " learn",
+                  "p": 14.6
+                },
+                {
+                  "text": " go",
+                  "p": 3
+                },
+                {
+                  "text": " discover",
+                  "p": 2.5
+                },
+                {
+                  "text": " read",
+                  "p": 1.5
+                }
+              ]
+            },
+            {
+              "chosen": " the",
+              "top": [
+                {
+                  "text": " the",
+                  "p": 60.6
+                },
+                {
+                  "text": " and",
+                  "p": 14.9
+                },
+                {
+                  "text": " all",
+                  "p": 10.5
+                },
+                {
+                  "text": " new",
+                  "p": 6.7
+                },
+                {
+                  "text": " different",
+                  "p": 1.7
+                }
+              ]
+            }
+          ],
+          "legend": "· marks a space: it belongs to the chip",
+          "heading": "Scores for the next chip, round {k}",
+          "startPicked": 0
+        },
+        "cues": [
+          {
+            "at": "@once",
+            "do": "focus",
+            "target": "prompt",
+            "label": "what we gave the AI"
+          },
+          {
+            "at": "@next",
+            "do": "point",
+            "target": "slot",
+            "anchor": [
+              0.5,
+              0.55
+            ]
+          },
+          {
+            "at": "@score",
+            "do": "step",
+            "step": 0
+          },
+          {
+            "at": "@score",
+            "do": "focus",
+            "target": "bars",
+            "label": "a score for each possible next chip"
+          },
+          {
+            "at": "@chip",
+            "do": "focus",
+            "target": "cand:0",
+            "label": "chip = a token: a piece of text",
+            "side": "right"
+          },
+          {
+            "at": "@picks",
+            "do": "focus",
+            "target": "cand:0",
+            "label": "pick one",
+            "side": "right"
+          },
+          {
+            "at": "@adds",
+            "do": "focus",
+            "target": "slot",
+            "label": "add it"
+          },
+          {
+            "at": "@again",
+            "do": "focus",
+            "target": null
+          },
+          {
+            "at": "@loop",
+            "do": "focus",
+            "target": [
+              "slot",
+              "bars"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "b02",
+      "movement": "proof",
+      "purpose": "demonstration",
+      "evidenceIds": [
+        "e-greedy"
+      ],
+      "narration": "These are the real scores, from a small AI called Qwen, running on my laptop. The top one, young, gets about thirty percent. Little and curious come next. Here it picks the top one, young, and adds it to the sentence.",
+      "visual": {
+        "type": "explain",
+        "scene": "nextword",
+        "title": "The real scores",
+        "badge": "Real scores · Qwen 3.5",
+        "source": "Measured . qwen3.5:4b, Ollama 0.40.2, RTX 3050 Laptop 4 GB; plain text, no chat wrapper; scores = Ollama's logprobs as percent, top 5 of the next chip",
+        "data": {
+          "prompt": "Once upon a time, there was a",
+          "steps": [
+            {
+              "chosen": " young",
+              "top": [
+                {
+                  "text": " young",
+                  "p": 29.6
+                },
+                {
+                  "text": " little",
+                  "p": 16.9
+                },
+                {
+                  "text": " curious",
+                  "p": 13.7
+                },
+                {
+                  "text": " very",
+                  "p": 8.5
+                },
+                {
+                  "text": " group",
+                  "p": 6.7
+                }
+              ]
+            },
+            {
+              "chosen": " adventurer",
+              "top": [
+                {
+                  "text": " adventurer",
+                  "p": 20.8
+                },
+                {
+                  "text": " boy",
+                  "p": 14.4
+                },
+                {
+                  "text": " student",
+                  "p": 13.9
+                },
+                {
+                  "text": " and",
+                  "p": 10.6
+                },
+                {
+                  "text": " girl",
+                  "p": 6.2
+                }
+              ]
+            },
+            {
+              "chosen": " named",
+              "top": [
+                {
+                  "text": " named",
+                  "p": 99.7
+                },
+                {
+                  "text": " who",
+                  "p": 0.2
+                },
+                {
+                  "text": " called",
+                  "p": 0
+                },
+                {
+                  "text": " in",
+                  "p": 0
+                },
+                {
+                  "text": ",",
+                  "p": 0
+                }
+              ]
+            },
+            {
+              "chosen": " Lily",
+              "top": [
+                {
+                  "text": " Lily",
+                  "p": 29.7
+                },
+                {
+                  "text": " Alex",
+                  "p": 23
+                },
+                {
+                  "text": " Tom",
+                  "p": 19.9
+                },
+                {
+                  "text": " Jack",
+                  "p": 14.3
+                },
+                {
+                  "text": " Tim",
+                  "p": 6.5
+                }
+              ]
+            },
+            {
+              "chosen": ".",
+              "top": [
+                {
+                  "text": ".",
+                  "p": 61.9
+                },
+                {
+                  "text": " who",
+                  "p": 37.3
+                },
+                {
+                  "text": ",",
+                  "p": 0.4
+                },
+                {
+                  "text": " in",
+                  "p": 0.1
+                },
+                {
+                  "text": "!",
+                  "p": 0.1
+                }
+              ]
+            },
+            {
+              "chosen": " Lily",
+              "top": [
+                {
+                  "text": " Lily",
+                  "p": 74.7
+                },
+                {
+                  "text": " One",
+                  "p": 22.4
+                },
+                {
+                  "text": " She",
+                  "p": 1.5
+                },
+                {
+                  "text": " In",
+                  "p": 0.5
+                },
+                {
+                  "text": "\n",
+                  "p": 0.4
+                }
+              ]
+            },
+            {
+              "chosen": " loved",
+              "top": [
+                {
+                  "text": " loved",
+                  "p": 57
+                },
+                {
+                  "text": " was",
+                  "p": 23.9
+                },
+                {
+                  "text": " had",
+                  "p": 11.6
+                },
+                {
+                  "text": " lived",
+                  "p": 6.1
+                },
+                {
+                  "text": " always",
+                  "p": 0.3
+                }
+              ]
+            },
+            {
+              "chosen": " to",
+              "top": [
+                {
+                  "text": " to",
+                  "p": 58.1
+                },
+                {
+                  "text": " exploring",
+                  "p": 26.7
+                },
+                {
+                  "text": " all",
+                  "p": 2.9
+                },
+                {
+                  "text": " learning",
+                  "p": 2.2
+                },
+                {
+                  "text": " math",
+                  "p": 2
+                }
+              ]
+            },
+            {
+              "chosen": " explore",
+              "top": [
+                {
+                  "text": " explore",
+                  "p": 74.6
+                },
+                {
+                  "text": " learn",
+                  "p": 14.6
+                },
+                {
+                  "text": " go",
+                  "p": 3
+                },
+                {
+                  "text": " discover",
+                  "p": 2.5
+                },
+                {
+                  "text": " read",
+                  "p": 1.5
+                }
+              ]
+            },
+            {
+              "chosen": " the",
+              "top": [
+                {
+                  "text": " the",
+                  "p": 60.6
+                },
+                {
+                  "text": " and",
+                  "p": 14.9
+                },
+                {
+                  "text": " all",
+                  "p": 10.5
+                },
+                {
+                  "text": " new",
+                  "p": 6.7
+                },
+                {
+                  "text": " different",
+                  "p": 1.7
+                }
+              ]
+            }
+          ],
+          "legend": "· marks a space: it belongs to the chip",
+          "heading": "Scores for the next chip, round {k}",
+          "startStep": 0
+        },
+        "cues": [
+          {
+            "at": "@real",
+            "do": "focus",
+            "target": "bars",
+            "label": "measured on this laptop"
+          },
+          {
+            "at": "@young",
+            "do": "focus",
+            "target": "cand:0"
+          },
+          {
+            "at": "@young",
+            "do": "point",
+            "target": "pct:0",
+            "anchor": [
+              0.3,
+              0.55
+            ]
+          },
+          {
+            "at": "@little",
+            "do": "focus",
+            "target": [
+              "cand:1",
+              "cand:2"
+            ]
+          },
+          {
+            "at": "@picks",
+            "do": "pick",
+            "step": 0
+          },
+          {
+            "at": "@picks",
+            "do": "focus",
+            "target": "cand:0",
+            "label": "picked",
+            "side": "right"
+          },
+          {
+            "at": "@adds",
+            "do": "focus",
+            "target": "chip:0",
+            "label": "added to the sentence"
+          }
+        ]
+      }
+    },
+    {
+      "id": "b03",
+      "movement": "proof",
+      "purpose": "demonstration",
+      "evidenceIds": [
+        "e-greedy",
+        "e-vocab"
+      ],
+      "narration": "A chip, or token, is a piece of text the AI reads and writes. Here each one is a whole word with its space in front: that dot marks the space. Sometimes a chip is only part of a word, or a full stop. And the AI scores every chip it knows, about two hundred forty-eight thousand of them, all at once. The top five shown here add up to about seventy-five percent. Everything else it knows shares the rest.",
+      "visual": {
+        "type": "explain",
+        "scene": "nextword",
+        "title": "Every chip gets a score",
+        "badge": "Real scores · Qwen 3.5",
+        "source": "Measured . qwen3.5:4b, Ollama 0.40.2, RTX 3050 Laptop 4 GB; plain text, no chat wrapper. Documented: the model file lists 248,320 chips",
+        "data": {
+          "prompt": "Once upon a time, there was a",
+          "steps": [
+            {
+              "chosen": " young",
+              "top": [
+                {
+                  "text": " young",
+                  "p": 29.6
+                },
+                {
+                  "text": " little",
+                  "p": 16.9
+                },
+                {
+                  "text": " curious",
+                  "p": 13.7
+                },
+                {
+                  "text": " very",
+                  "p": 8.5
+                },
+                {
+                  "text": " group",
+                  "p": 6.7
+                }
+              ]
+            },
+            {
+              "chosen": " adventurer",
+              "top": [
+                {
+                  "text": " adventurer",
+                  "p": 20.8
+                },
+                {
+                  "text": " boy",
+                  "p": 14.4
+                },
+                {
+                  "text": " student",
+                  "p": 13.9
+                },
+                {
+                  "text": " and",
+                  "p": 10.6
+                },
+                {
+                  "text": " girl",
+                  "p": 6.2
+                }
+              ]
+            },
+            {
+              "chosen": " named",
+              "top": [
+                {
+                  "text": " named",
+                  "p": 99.7
+                },
+                {
+                  "text": " who",
+                  "p": 0.2
+                },
+                {
+                  "text": " called",
+                  "p": 0
+                },
+                {
+                  "text": " in",
+                  "p": 0
+                },
+                {
+                  "text": ",",
+                  "p": 0
+                }
+              ]
+            },
+            {
+              "chosen": " Lily",
+              "top": [
+                {
+                  "text": " Lily",
+                  "p": 29.7
+                },
+                {
+                  "text": " Alex",
+                  "p": 23
+                },
+                {
+                  "text": " Tom",
+                  "p": 19.9
+                },
+                {
+                  "text": " Jack",
+                  "p": 14.3
+                },
+                {
+                  "text": " Tim",
+                  "p": 6.5
+                }
+              ]
+            },
+            {
+              "chosen": ".",
+              "top": [
+                {
+                  "text": ".",
+                  "p": 61.9
+                },
+                {
+                  "text": " who",
+                  "p": 37.3
+                },
+                {
+                  "text": ",",
+                  "p": 0.4
+                },
+                {
+                  "text": " in",
+                  "p": 0.1
+                },
+                {
+                  "text": "!",
+                  "p": 0.1
+                }
+              ]
+            },
+            {
+              "chosen": " Lily",
+              "top": [
+                {
+                  "text": " Lily",
+                  "p": 74.7
+                },
+                {
+                  "text": " One",
+                  "p": 22.4
+                },
+                {
+                  "text": " She",
+                  "p": 1.5
+                },
+                {
+                  "text": " In",
+                  "p": 0.5
+                },
+                {
+                  "text": "\n",
+                  "p": 0.4
+                }
+              ]
+            },
+            {
+              "chosen": " loved",
+              "top": [
+                {
+                  "text": " loved",
+                  "p": 57
+                },
+                {
+                  "text": " was",
+                  "p": 23.9
+                },
+                {
+                  "text": " had",
+                  "p": 11.6
+                },
+                {
+                  "text": " lived",
+                  "p": 6.1
+                },
+                {
+                  "text": " always",
+                  "p": 0.3
+                }
+              ]
+            },
+            {
+              "chosen": " to",
+              "top": [
+                {
+                  "text": " to",
+                  "p": 58.1
+                },
+                {
+                  "text": " exploring",
+                  "p": 26.7
+                },
+                {
+                  "text": " all",
+                  "p": 2.9
+                },
+                {
+                  "text": " learning",
+                  "p": 2.2
+                },
+                {
+                  "text": " math",
+                  "p": 2
+                }
+              ]
+            },
+            {
+              "chosen": " explore",
+              "top": [
+                {
+                  "text": " explore",
+                  "p": 74.6
+                },
+                {
+                  "text": " learn",
+                  "p": 14.6
+                },
+                {
+                  "text": " go",
+                  "p": 3
+                },
+                {
+                  "text": " discover",
+                  "p": 2.5
+                },
+                {
+                  "text": " read",
+                  "p": 1.5
+                }
+              ]
+            },
+            {
+              "chosen": " the",
+              "top": [
+                {
+                  "text": " the",
+                  "p": 60.6
+                },
+                {
+                  "text": " and",
+                  "p": 14.9
+                },
+                {
+                  "text": " all",
+                  "p": 10.5
+                },
+                {
+                  "text": " new",
+                  "p": 6.7
+                },
+                {
+                  "text": " different",
+                  "p": 1.7
+                }
+              ]
+            }
+          ],
+          "legend": "· marks a space: it belongs to the chip",
+          "heading": "Scores for the next chip, round {k}",
+          "startPicked": 1,
+          "startStep": 0
+        },
+        "cues": [
+          {
+            "at": "@chip",
+            "do": "focus",
+            "target": [
+              "label:0",
+              "label:1",
+              "label:2",
+              "label:3",
+              "label:4"
+            ],
+            "label": "chip = token",
+            "side": "above"
+          },
+          {
+            "at": "@reads",
+            "do": "point",
+            "target": "label:1",
+            "anchor": [
+              0.6,
+              0.55
+            ]
+          },
+          {
+            "at": "@front",
+            "do": "focus",
+            "target": "label:0",
+            "label": "space + word = one chip",
+            "side": "right"
+          },
+          {
+            "at": "@dot",
+            "do": "focus",
+            "target": "legend"
+          },
+          {
+            "at": "@dot",
+            "do": "point",
+            "target": "label:0",
+            "anchor": [
+              0.12,
+              0.5
+            ]
+          },
+          {
+            "at": "@every",
+            "do": "focus",
+            "target": "bars",
+            "label": "every chip it knows: about 248,000"
+          },
+          {
+            "at": "@five",
+            "do": "focus",
+            "target": [
+              "cand:0",
+              "cand:1",
+              "cand:2",
+              "cand:3",
+              "cand:4"
+            ],
+            "label": "top 5 together: about 75%",
+            "side": "right"
+          },
+          {
+            "at": "@sometimes",
+            "do": "focus",
+            "target": "legend",
+            "label": "a chip can also be part of a word, or a full stop"
+          },
+          {
+            "at": "@else",
+            "do": "focus",
+            "target": "rest",
+            "label": "all the other chips, together"
+          },
+          {
+            "at": "@else",
+            "do": "point",
+            "target": "rest",
+            "anchor": [
+              0.62,
+              0.55
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "b04",
+      "movement": "proof",
+      "purpose": "demonstration",
+      "evidenceIds": [
+        "e-greedy"
+      ],
+      "narration": "Now watch the loop. Here it always takes the top score. With young in the sentence, every score changes: now adventurer, boy and student lead. Adventurer wins with about twenty-one percent. In the next round, named gets ninety-nine point seven percent: almost certain. Then a name: Lily, ahead of Alex. Then a full stop. Five rounds, five chips, one sentence. Each round adds just one chip.",
+      "visual": {
+        "type": "explain",
+        "scene": "nextword",
+        "title": "Score, pick, add, repeat",
+        "badge": "Real scores · Qwen 3.5",
+        "source": "Measured . qwen3.5:4b, Ollama 0.40.2, RTX 3050 Laptop 4 GB; plain text, no chat wrapper; temperature 0 and penalties off: always the top score; repeated: same chips",
+        "data": {
+          "prompt": "Once upon a time, there was a",
+          "steps": [
+            {
+              "chosen": " young",
+              "top": [
+                {
+                  "text": " young",
+                  "p": 29.6
+                },
+                {
+                  "text": " little",
+                  "p": 16.9
+                },
+                {
+                  "text": " curious",
+                  "p": 13.7
+                },
+                {
+                  "text": " very",
+                  "p": 8.5
+                },
+                {
+                  "text": " group",
+                  "p": 6.7
+                }
+              ]
+            },
+            {
+              "chosen": " adventurer",
+              "top": [
+                {
+                  "text": " adventurer",
+                  "p": 20.8
+                },
+                {
+                  "text": " boy",
+                  "p": 14.4
+                },
+                {
+                  "text": " student",
+                  "p": 13.9
+                },
+                {
+                  "text": " and",
+                  "p": 10.6
+                },
+                {
+                  "text": " girl",
+                  "p": 6.2
+                }
+              ]
+            },
+            {
+              "chosen": " named",
+              "top": [
+                {
+                  "text": " named",
+                  "p": 99.7
+                },
+                {
+                  "text": " who",
+                  "p": 0.2
+                },
+                {
+                  "text": " called",
+                  "p": 0
+                },
+                {
+                  "text": " in",
+                  "p": 0
+                },
+                {
+                  "text": ",",
+                  "p": 0
+                }
+              ]
+            },
+            {
+              "chosen": " Lily",
+              "top": [
+                {
+                  "text": " Lily",
+                  "p": 29.7
+                },
+                {
+                  "text": " Alex",
+                  "p": 23
+                },
+                {
+                  "text": " Tom",
+                  "p": 19.9
+                },
+                {
+                  "text": " Jack",
+                  "p": 14.3
+                },
+                {
+                  "text": " Tim",
+                  "p": 6.5
+                }
+              ]
+            },
+            {
+              "chosen": ".",
+              "top": [
+                {
+                  "text": ".",
+                  "p": 61.9
+                },
+                {
+                  "text": " who",
+                  "p": 37.3
+                },
+                {
+                  "text": ",",
+                  "p": 0.4
+                },
+                {
+                  "text": " in",
+                  "p": 0.1
+                },
+                {
+                  "text": "!",
+                  "p": 0.1
+                }
+              ]
+            },
+            {
+              "chosen": " Lily",
+              "top": [
+                {
+                  "text": " Lily",
+                  "p": 74.7
+                },
+                {
+                  "text": " One",
+                  "p": 22.4
+                },
+                {
+                  "text": " She",
+                  "p": 1.5
+                },
+                {
+                  "text": " In",
+                  "p": 0.5
+                },
+                {
+                  "text": "\n",
+                  "p": 0.4
+                }
+              ]
+            },
+            {
+              "chosen": " loved",
+              "top": [
+                {
+                  "text": " loved",
+                  "p": 57
+                },
+                {
+                  "text": " was",
+                  "p": 23.9
+                },
+                {
+                  "text": " had",
+                  "p": 11.6
+                },
+                {
+                  "text": " lived",
+                  "p": 6.1
+                },
+                {
+                  "text": " always",
+                  "p": 0.3
+                }
+              ]
+            },
+            {
+              "chosen": " to",
+              "top": [
+                {
+                  "text": " to",
+                  "p": 58.1
+                },
+                {
+                  "text": " exploring",
+                  "p": 26.7
+                },
+                {
+                  "text": " all",
+                  "p": 2.9
+                },
+                {
+                  "text": " learning",
+                  "p": 2.2
+                },
+                {
+                  "text": " math",
+                  "p": 2
+                }
+              ]
+            },
+            {
+              "chosen": " explore",
+              "top": [
+                {
+                  "text": " explore",
+                  "p": 74.6
+                },
+                {
+                  "text": " learn",
+                  "p": 14.6
+                },
+                {
+                  "text": " go",
+                  "p": 3
+                },
+                {
+                  "text": " discover",
+                  "p": 2.5
+                },
+                {
+                  "text": " read",
+                  "p": 1.5
+                }
+              ]
+            },
+            {
+              "chosen": " the",
+              "top": [
+                {
+                  "text": " the",
+                  "p": 60.6
+                },
+                {
+                  "text": " and",
+                  "p": 14.9
+                },
+                {
+                  "text": " all",
+                  "p": 10.5
+                },
+                {
+                  "text": " new",
+                  "p": 6.7
+                },
+                {
+                  "text": " different",
+                  "p": 1.7
+                }
+              ]
+            }
+          ],
+          "legend": "· marks a space: it belongs to the chip",
+          "heading": "Scores for the next chip, round {k}",
+          "startPicked": 1,
+          "startStep": 0
+        },
+        "cues": [
+          {
+            "at": "@loop",
+            "do": "focus",
+            "target": null
+          },
+          {
+            "at": "@top",
+            "do": "focus",
+            "target": "chip:0",
+            "label": "young: already picked",
+            "side": "right"
+          },
+          {
+            "at": "@every",
+            "do": "step",
+            "step": 1
+          },
+          {
+            "at": "@changes",
+            "do": "focus",
+            "target": "bars",
+            "label": "new sentence, new scores"
+          },
+          {
+            "at": "@adventurer#2",
+            "do": "pick",
+            "step": 1
+          },
+          {
+            "at": "@adventurer#2",
+            "do": "point",
+            "target": "pct:0",
+            "anchor": [
+              0.3,
+              0.55
+            ]
+          },
+          {
+            "at": "@round",
+            "do": "step",
+            "step": 2
+          },
+          {
+            "at": "@round",
+            "do": "focus",
+            "target": null
+          },
+          {
+            "at": "@certain",
+            "do": "focus",
+            "target": "cand:0",
+            "label": "almost certain",
+            "side": "above"
+          },
+          {
+            "at": "@certain",
+            "do": "pick",
+            "step": 2
+          },
+          {
+            "at": "@name",
+            "do": "step",
+            "step": 3
+          },
+          {
+            "at": "@name",
+            "do": "focus",
+            "target": null
+          },
+          {
+            "at": "@alex",
+            "do": "focus",
+            "target": [
+              "cand:0",
+              "cand:1"
+            ],
+            "label": "close: Lily, then Alex",
+            "side": "right"
+          },
+          {
+            "at": "@alex+10",
+            "do": "pick",
+            "step": 3
+          },
+          {
+            "at": "@full",
+            "do": "step",
+            "step": 4
+          },
+          {
+            "at": "@stop",
+            "do": "pick",
+            "step": 4
+          },
+          {
+            "at": "@stop",
+            "do": "focus",
+            "target": null
+          },
+          {
+            "at": "@one sentence",
+            "do": "focus",
+            "target": "sentence",
+            "label": "five rounds, five chips"
+          },
+          {
+            "at": "@each",
+            "do": "focus",
+            "target": "sentence"
+          }
+        ]
+      }
+    },
+    {
+      "id": "b05",
+      "movement": "proof",
+      "purpose": "proof",
+      "evidenceIds": [
+        "e-sample"
+      ],
+      "narration": "But an AI app usually does not take the top score every time. It draws one chip at random, and a higher score only means a better chance. So I switched off the extra filters and let it draw the first chip a hundred times, straight from these scores. Young came out thirty times. Curious came out twenty times, more than little this time, just by chance. In total, twenty-six different words came out: the top five, plus twenty-one others, like furry and retired. The scores stay the same. The draw is what changes.",
+      "visual": {
+        "type": "explain",
+        "scene": "nextword",
+        "title": "100 draws from the same scores",
+        "badge": "Measured on this laptop",
+        "source": "Measured . qwen3.5:4b, Ollama 0.40.2, RTX 3050 Laptop 4 GB; plain text, no chat wrapper; 100 runs of one chip, temperature 1, no top-k or top-p cut, penalties off, seed = run number",
+        "data": {
+          "prompt": "Once upon a time, there was a",
+          "steps": [
+            {
+              "chosen": " young",
+              "top": [
+                {
+                  "text": " young",
+                  "p": 29.6
+                },
+                {
+                  "text": " little",
+                  "p": 16.9
+                },
+                {
+                  "text": " curious",
+                  "p": 13.7
+                },
+                {
+                  "text": " very",
+                  "p": 8.5
+                },
+                {
+                  "text": " group",
+                  "p": 6.7
+                }
+              ]
+            },
+            {
+              "chosen": " adventurer",
+              "top": [
+                {
+                  "text": " adventurer",
+                  "p": 20.8
+                },
+                {
+                  "text": " boy",
+                  "p": 14.4
+                },
+                {
+                  "text": " student",
+                  "p": 13.9
+                },
+                {
+                  "text": " and",
+                  "p": 10.6
+                },
+                {
+                  "text": " girl",
+                  "p": 6.2
+                }
+              ]
+            },
+            {
+              "chosen": " named",
+              "top": [
+                {
+                  "text": " named",
+                  "p": 99.7
+                },
+                {
+                  "text": " who",
+                  "p": 0.2
+                },
+                {
+                  "text": " called",
+                  "p": 0
+                },
+                {
+                  "text": " in",
+                  "p": 0
+                },
+                {
+                  "text": ",",
+                  "p": 0
+                }
+              ]
+            },
+            {
+              "chosen": " Lily",
+              "top": [
+                {
+                  "text": " Lily",
+                  "p": 29.7
+                },
+                {
+                  "text": " Alex",
+                  "p": 23
+                },
+                {
+                  "text": " Tom",
+                  "p": 19.9
+                },
+                {
+                  "text": " Jack",
+                  "p": 14.3
+                },
+                {
+                  "text": " Tim",
+                  "p": 6.5
+                }
+              ]
+            },
+            {
+              "chosen": ".",
+              "top": [
+                {
+                  "text": ".",
+                  "p": 61.9
+                },
+                {
+                  "text": " who",
+                  "p": 37.3
+                },
+                {
+                  "text": ",",
+                  "p": 0.4
+                },
+                {
+                  "text": " in",
+                  "p": 0.1
+                },
+                {
+                  "text": "!",
+                  "p": 0.1
+                }
+              ]
+            },
+            {
+              "chosen": " Lily",
+              "top": [
+                {
+                  "text": " Lily",
+                  "p": 74.7
+                },
+                {
+                  "text": " One",
+                  "p": 22.4
+                },
+                {
+                  "text": " She",
+                  "p": 1.5
+                },
+                {
+                  "text": " In",
+                  "p": 0.5
+                },
+                {
+                  "text": "\n",
+                  "p": 0.4
+                }
+              ]
+            },
+            {
+              "chosen": " loved",
+              "top": [
+                {
+                  "text": " loved",
+                  "p": 57
+                },
+                {
+                  "text": " was",
+                  "p": 23.9
+                },
+                {
+                  "text": " had",
+                  "p": 11.6
+                },
+                {
+                  "text": " lived",
+                  "p": 6.1
+                },
+                {
+                  "text": " always",
+                  "p": 0.3
+                }
+              ]
+            },
+            {
+              "chosen": " to",
+              "top": [
+                {
+                  "text": " to",
+                  "p": 58.1
+                },
+                {
+                  "text": " exploring",
+                  "p": 26.7
+                },
+                {
+                  "text": " all",
+                  "p": 2.9
+                },
+                {
+                  "text": " learning",
+                  "p": 2.2
+                },
+                {
+                  "text": " math",
+                  "p": 2
+                }
+              ]
+            },
+            {
+              "chosen": " explore",
+              "top": [
+                {
+                  "text": " explore",
+                  "p": 74.6
+                },
+                {
+                  "text": " learn",
+                  "p": 14.6
+                },
+                {
+                  "text": " go",
+                  "p": 3
+                },
+                {
+                  "text": " discover",
+                  "p": 2.5
+                },
+                {
+                  "text": " read",
+                  "p": 1.5
+                }
+              ]
+            },
+            {
+              "chosen": " the",
+              "top": [
+                {
+                  "text": " the",
+                  "p": 60.6
+                },
+                {
+                  "text": " and",
+                  "p": 14.9
+                },
+                {
+                  "text": " all",
+                  "p": 10.5
+                },
+                {
+                  "text": " new",
+                  "p": 6.7
+                },
+                {
+                  "text": " different",
+                  "p": 1.7
+                }
+              ]
+            }
+          ],
+          "legend": "· marks a space: it belongs to the chip",
+          "heading": "Scores for the first chip",
+          "startStep": 0,
+          "tally": {
+            "draws": [
+              " furry",
+              " really",
+              " very",
+              " curious",
+              " very",
+              " brave",
+              " little",
+              " long",
+              " little",
+              " little",
+              " very",
+              " young",
+              " young",
+              " magical",
+              " curious",
+              " little",
+              " really",
+              " very",
+              " young",
+              " curious",
+              " curious",
+              " math",
+              " young",
+              " little",
+              " rule",
+              " guy",
+              " young",
+              " group",
+              " curious",
+              " talented",
+              " very",
+              " very",
+              " student",
+              " big",
+              " young",
+              " very",
+              " group",
+              " curious",
+              " class",
+              " young",
+              " young",
+              " curious",
+              " young",
+              " young",
+              " little",
+              " little",
+              " curious",
+              " young",
+              " young",
+              " group",
+              " little",
+              " curious",
+              " young",
+              " big",
+              " couple",
+              " very",
+              " young",
+              " curious",
+              " curious",
+              " retired",
+              " curious",
+              " young",
+              " young",
+              " retired",
+              " curious",
+              " big",
+              " grown",
+              " young",
+              " young",
+              " young",
+              " lovely",
+              " courageous",
+              " little",
+              " young",
+              " guy",
+              " young",
+              " very",
+              " curious",
+              " young",
+              " young",
+              " young",
+              " very",
+              " young",
+              " young",
+              " curious",
+              " naughty",
+              " curious",
+              " young",
+              " girl",
+              " curious",
+              " newborn",
+              " curious",
+              " young",
+              " curious",
+              " little",
+              " young",
+              " curious",
+              " little",
+              " boy",
+              " young"
+            ],
+            "rate": 1,
+            "heading": "100 real draws"
+          }
+        },
+        "cues": [
+          {
+            "at": "@top",
+            "do": "focus",
+            "target": "cand:0"
+          },
+          {
+            "at": "@random",
+            "do": "focus",
+            "target": "bars",
+            "label": "higher score = better chance, not a sure pick"
+          },
+          {
+            "at": "@better",
+            "do": "point",
+            "target": "pct:0",
+            "anchor": [
+              0.3,
+              0.55
+            ]
+          },
+          {
+            "at": "@filters",
+            "do": "focus",
+            "target": "bars",
+            "label": "extra filters off: the draws follow these scores"
+          },
+          {
+            "at": "@hundred",
+            "do": "tally"
+          },
+          {
+            "at": "@hundred",
+            "do": "focus",
+            "target": "grid",
+            "label": "one square = one real draw"
+          },
+          {
+            "at": "@young",
+            "do": "focus",
+            "target": "cand:0"
+          },
+          {
+            "at": "@thirty",
+            "do": "point",
+            "target": "drawn:0",
+            "anchor": [
+              0.3,
+              0.55
+            ]
+          },
+          {
+            "at": "@curious",
+            "do": "focus",
+            "target": [
+              "cand:1",
+              "cand:2"
+            ]
+          },
+          {
+            "at": "@curious",
+            "do": "point",
+            "target": "drawn:2",
+            "anchor": [
+              0.3,
+              0.55
+            ]
+          },
+          {
+            "at": "@total",
+            "do": "focus",
+            "target": [
+              "rest",
+              "drawnRest"
+            ],
+            "label": "26 draws, 21 different words outside the top five",
+            "side": "above"
+          },
+          {
+            "at": "@furry",
+            "do": "focus",
+            "target": "grid",
+            "label": "26 different words, like furry and retired"
+          },
+          {
+            "at": "@same",
+            "do": "focus",
+            "target": "bars",
+            "label": "the scores: the same every time"
+          },
+          {
+            "at": "@draw#2",
+            "do": "focus",
+            "target": "grid",
+            "label": "the draw: different every time"
+          }
+        ]
+      }
+    },
+    {
+      "id": "b06",
+      "movement": "proof",
+      "purpose": "demonstration",
+      "evidenceIds": [
+        "e-code"
+      ],
+      "narration": "If you write code, you can see these scores yourself. These eight lines of Python ask Ollama for one chip, with log probs turned on, and the top five. Each score comes back as a log prob, and math dot exp, times a hundred, turns it into a percent. Run it, and young comes back with twenty-nine point six percent, the same score we saw before.",
+      "visual": {
+        "type": "explain",
+        "scene": "code",
+        "title": "See the scores yourself",
+        "badge": "Replay of a real run",
+        "source": "Measured . this file ran against qwen3.5:4b, Ollama 0.40.2, RTX 3050 Laptop 4 GB; real output of the second run. \"logprobs\" and \"top_logprobs\": Ollama's documented API fields",
+        "data": {
+          "file": "nextword.py",
+          "lines": [
+            "import math, requests",
+            "job = {\"model\": \"qwen3.5:4b\", \"prompt\": \"Once upon a time, there was a\",",
+            "       \"raw\": True, \"stream\": False, \"logprobs\": True, \"top_logprobs\": 5,",
+            "       \"options\": {\"num_predict\": 1, \"temperature\": 0}}",
+            "r = requests.post(\"http://localhost:11434/api/generate\", json=job).json()",
+            "for chip in r[\"logprobs\"][0][\"top_logprobs\"]:",
+            "    score = 100 * math.exp(chip[\"logprob\"])",
+            "    print(repr(chip[\"token\"]), f\"{score:.1f}%\")"
+          ],
+          "lang": "python",
+          "runs": [
+            {
+              "cmd": "py nextword.py",
+              "out": [
+                "' young' 29.6%",
+                "' little' 16.9%",
+                "' curious' 13.7%",
+                "' very' 8.5%",
+                "' group' 6.7%"
+              ]
+            }
+          ],
+          "prompt": "PS>",
+          "fontSize": 30,
+          "termFontSize": 36,
+          "typeCps": 70,
+          "top": 150,
+          "lineHeight": 1.45
+        },
+        "cues": [
+          {
+            "at": "@lines",
+            "do": "focus",
+            "target": "code",
+            "label": "8 lines of Python"
+          },
+          {
+            "at": "@python+0",
+            "do": "line",
+            "line": 1
+          },
+          {
+            "at": "@python+5",
+            "do": "line",
+            "line": 2
+          },
+          {
+            "at": "@python+10",
+            "do": "line",
+            "line": 3
+          },
+          {
+            "at": "@python+15",
+            "do": "line",
+            "line": 4
+          },
+          {
+            "at": "@python+20",
+            "do": "line",
+            "line": 5
+          },
+          {
+            "at": "@python+25",
+            "do": "line",
+            "line": 6
+          },
+          {
+            "at": "@python+30",
+            "do": "line",
+            "line": 7
+          },
+          {
+            "at": "@python+35",
+            "do": "line",
+            "line": 8
+          },
+          {
+            "at": "@one",
+            "do": "focus",
+            "target": "line:4:19-35",
+            "label": "just one chip"
+          },
+          {
+            "at": "@probs",
+            "do": "focus",
+            "target": "line:3:37-53",
+            "label": "send back the scores"
+          },
+          {
+            "at": "@probs",
+            "do": "point",
+            "target": "line:3:37-53"
+          },
+          {
+            "at": "@five",
+            "do": "focus",
+            "target": "line:3:55-72",
+            "label": "the top 5"
+          },
+          {
+            "at": "@exp",
+            "do": "focus",
+            "target": "line:7:18-43",
+            "label": "log prob -> percent"
+          },
+          {
+            "at": "@exp",
+            "do": "point",
+            "target": "line:7:18-26"
+          },
+          {
+            "at": "@run",
+            "do": "run",
+            "run": 0
+          },
+          {
+            "at": "@run",
+            "do": "focus",
+            "target": null
+          },
+          {
+            "at": "@young",
+            "do": "zoom",
+            "target": "out:0:0",
+            "scale": 1.5
+          },
+          {
+            "at": "@young",
+            "do": "focus",
+            "target": "out:0:0",
+            "label": "the same score as in the bars before",
+            "pad": 16
+          },
+          {
+            "at": "@young",
+            "do": "point",
+            "target": "out:0:0:9-14"
+          }
+        ]
+      }
+    },
+    {
+      "id": "b07",
+      "movement": "proof",
+      "purpose": "answer",
+      "evidenceIds": [
+        "e-greedy",
+        "e-sample"
+      ],
+      "narration": "So an AI writes one chip at a time. It scores every chip it knows, picks one, adds it to the sentence, and repeats, until the answer is done. These scores come from one small model on my laptop. A different model would likely give different scores, but the loop is the same.",
+      "visual": {
+        "type": "explain",
+        "scene": "nextword",
+        "title": "The whole trick, in one loop",
+        "badge": "Real scores · Qwen 3.5",
+        "source": "Measured . qwen3.5:4b, Ollama 0.40.2, RTX 3050 Laptop 4 GB; plain text, no chat wrapper; 10 rounds, temperature 0, penalties off, stopped after 10 chips",
+        "data": {
+          "prompt": "Once upon a time, there was a",
+          "steps": [
+            {
+              "chosen": " young",
+              "top": [
+                {
+                  "text": " young",
+                  "p": 29.6
+                },
+                {
+                  "text": " little",
+                  "p": 16.9
+                },
+                {
+                  "text": " curious",
+                  "p": 13.7
+                },
+                {
+                  "text": " very",
+                  "p": 8.5
+                },
+                {
+                  "text": " group",
+                  "p": 6.7
+                }
+              ]
+            },
+            {
+              "chosen": " adventurer",
+              "top": [
+                {
+                  "text": " adventurer",
+                  "p": 20.8
+                },
+                {
+                  "text": " boy",
+                  "p": 14.4
+                },
+                {
+                  "text": " student",
+                  "p": 13.9
+                },
+                {
+                  "text": " and",
+                  "p": 10.6
+                },
+                {
+                  "text": " girl",
+                  "p": 6.2
+                }
+              ]
+            },
+            {
+              "chosen": " named",
+              "top": [
+                {
+                  "text": " named",
+                  "p": 99.7
+                },
+                {
+                  "text": " who",
+                  "p": 0.2
+                },
+                {
+                  "text": " called",
+                  "p": 0
+                },
+                {
+                  "text": " in",
+                  "p": 0
+                },
+                {
+                  "text": ",",
+                  "p": 0
+                }
+              ]
+            },
+            {
+              "chosen": " Lily",
+              "top": [
+                {
+                  "text": " Lily",
+                  "p": 29.7
+                },
+                {
+                  "text": " Alex",
+                  "p": 23
+                },
+                {
+                  "text": " Tom",
+                  "p": 19.9
+                },
+                {
+                  "text": " Jack",
+                  "p": 14.3
+                },
+                {
+                  "text": " Tim",
+                  "p": 6.5
+                }
+              ]
+            },
+            {
+              "chosen": ".",
+              "top": [
+                {
+                  "text": ".",
+                  "p": 61.9
+                },
+                {
+                  "text": " who",
+                  "p": 37.3
+                },
+                {
+                  "text": ",",
+                  "p": 0.4
+                },
+                {
+                  "text": " in",
+                  "p": 0.1
+                },
+                {
+                  "text": "!",
+                  "p": 0.1
+                }
+              ]
+            },
+            {
+              "chosen": " Lily",
+              "top": [
+                {
+                  "text": " Lily",
+                  "p": 74.7
+                },
+                {
+                  "text": " One",
+                  "p": 22.4
+                },
+                {
+                  "text": " She",
+                  "p": 1.5
+                },
+                {
+                  "text": " In",
+                  "p": 0.5
+                },
+                {
+                  "text": "\n",
+                  "p": 0.4
+                }
+              ]
+            },
+            {
+              "chosen": " loved",
+              "top": [
+                {
+                  "text": " loved",
+                  "p": 57
+                },
+                {
+                  "text": " was",
+                  "p": 23.9
+                },
+                {
+                  "text": " had",
+                  "p": 11.6
+                },
+                {
+                  "text": " lived",
+                  "p": 6.1
+                },
+                {
+                  "text": " always",
+                  "p": 0.3
+                }
+              ]
+            },
+            {
+              "chosen": " to",
+              "top": [
+                {
+                  "text": " to",
+                  "p": 58.1
+                },
+                {
+                  "text": " exploring",
+                  "p": 26.7
+                },
+                {
+                  "text": " all",
+                  "p": 2.9
+                },
+                {
+                  "text": " learning",
+                  "p": 2.2
+                },
+                {
+                  "text": " math",
+                  "p": 2
+                }
+              ]
+            },
+            {
+              "chosen": " explore",
+              "top": [
+                {
+                  "text": " explore",
+                  "p": 74.6
+                },
+                {
+                  "text": " learn",
+                  "p": 14.6
+                },
+                {
+                  "text": " go",
+                  "p": 3
+                },
+                {
+                  "text": " discover",
+                  "p": 2.5
+                },
+                {
+                  "text": " read",
+                  "p": 1.5
+                }
+              ]
+            },
+            {
+              "chosen": " the",
+              "top": [
+                {
+                  "text": " the",
+                  "p": 60.6
+                },
+                {
+                  "text": " and",
+                  "p": 14.9
+                },
+                {
+                  "text": " all",
+                  "p": 10.5
+                },
+                {
+                  "text": " new",
+                  "p": 6.7
+                },
+                {
+                  "text": " different",
+                  "p": 1.7
+                }
+              ]
+            }
+          ],
+          "legend": "",
+          "heading": "Scores for the next chip, round {k}",
+          "startPicked": 9,
+          "startStep": 9
+        },
+        "cues": [
+          {
+            "at": "@time",
+            "do": "focus",
+            "target": "sentence",
+            "label": "one chip per round"
+          },
+          {
+            "at": "@scores",
+            "do": "focus",
+            "target": "bars"
+          },
+          {
+            "at": "@picks",
+            "do": "focus",
+            "target": "cand:0"
+          },
+          {
+            "at": "@adds",
+            "do": "pick",
+            "step": 9
+          },
+          {
+            "at": "@repeats",
+            "do": "focus",
+            "target": "sentence",
+            "label": "and again, until the answer is done"
+          },
+          {
+            "at": "@small",
+            "do": "focus",
+            "target": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "b08",
+      "movement": "landing",
+      "purpose": "next",
+      "evidenceIds": [
+        "e-sample"
+      ],
+      "narration": "That draw has a setting, called temperature: it decides how adventurous the draw is. Next time: what temperature does to the answers.",
+      "visual": {
+        "type": "end",
+        "series": "Runs Locally",
+        "line": "Next: what temperature does to an AI"
+      }
+    }
+  ]
+}

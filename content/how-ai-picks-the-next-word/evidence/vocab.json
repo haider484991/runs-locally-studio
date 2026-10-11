@@ -1,0 +1,6 @@
+{
+ "vocab_size": 248320,
+ "breakdown": "248,044 text chips + 26 special markers + 250 padding slots",
+ "source": "GGUF metadata of qwen3.5:4b (tokenizer.ggml.tokens), read with Ollama 0.35.1 on 2026-10-05 for the Runs Locally video 'What Is a Token?'",
+ "kind": "documented"
+}

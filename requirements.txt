@@ -1,0 +1,4 @@
+# The voice (scripts/tts.py). Also needs espeak-ng installed on the system and ffmpeg on PATH.
+kokoro>=0.9.4
+soundfile>=0.12
+numpy>=1.26

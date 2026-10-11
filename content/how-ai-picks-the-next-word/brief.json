@@ -1,0 +1,103 @@
+{
+  "version": 2,
+  "slug": "how-ai-picks-the-next-word",
+  "createdBy": "Claude Code, 2026-10-12",
+  "score": {
+    "heat": 1,
+    "stakes": 2,
+    "proof": 3,
+    "breadth": 3,
+    "total": 9,
+    "note": "Fourth explainer; promised on air at the end of what-is-vram-4gb-laptop. Demand: \"how do llms work\" 1,700 US searches a month (Ahrefs 2026-10-05). No views are promised."
+  },
+  "viewer": "A beginner who uses chat AIs and wonders how they produce words, without equations.",
+  "question": "How does an AI decide which word comes next?",
+  "promise": "Show the real scores a small local AI gives its next-chip candidates (young about 30%), the score-pick-add loop over five real rounds, 100 real random draws, and 8 lines of Python that print the scores.",
+  "earlyAnswer": "It scores every chip it could write next, picks one, adds it to the sentence, and repeats.",
+  "newValue": "Real logprobs from a model running on a 4 GB laptop, a real 100-draw tally against those scores, and code that prints them; most explainers draw made-up probability bars.",
+  "evidencePlan": "evidence/model-defaults.json (the default settings of the model, read on Ollama 0.40.2), evidence/greedy.json (10 rounds, top 5 each, repeated identically), sample.json (100 one-chip draws), code-run.json (the lesson file, run twice), pilot.json (prompt choice, not pooled); harness/nextword-runs.py.",
+  "nextStep": "Next video: what temperature does (backlog what-is-temperature-ai).",
+  "packagingEvidenceIds": [
+    "e-greedy"
+  ],
+  "packaging": [
+    {
+      "title": "How Does AI Pick the Next Word? The Real Scores Inside a Local AI (Qwen 3.5)",
+      "thumbnailText": "WHICH WORD NEXT?",
+      "imageIdea": "\"Once upon a time, there was a ___\" with the real score bars: young 29.6%, little, curious.",
+      "firstSentence": "Once upon a time, there was a... what comes next?"
+    },
+    {
+      "title": "I Let an AI Pick the Next Word 100 Times: 26 Different Answers",
+      "thumbnailText": "26 DIFFERENT WORDS",
+      "imageIdea": "The 100-square tally grid, colourful, with \"young 30x\".",
+      "firstSentence": "Same sentence, a hundred draws."
+    },
+    {
+      "title": "How an AI Writes: One Chip at a Time (Real Scores From a Local AI)",
+      "thumbnailText": "SCORE . PICK . REPEAT",
+      "imageIdea": "A loop arrow around the sentence chips.",
+      "firstSentence": "That loop is how an AI writes."
+    }
+  ],
+  "demand": [
+    {
+      "platform": "Google (Ahrefs Keywords Explorer, United States)",
+      "source": "Ahrefs MCP keywords-explorer-overview",
+      "retrievedAt": "2026-10-05",
+      "observation": "\"how do llms work\" 1,700 searches a month (2,600 global), KD 54. Google volumes, not YouTube demand."
+    },
+    {
+      "platform": "Runs Locally own channel data (Analytics API)",
+      "source": "growth-audit.mjs snapshot 2026-10-12",
+      "retrievedAt": "2026-10-12",
+      "observation": "Search is 69% of views (28 days to 10-09); the VRAM explainer (135 views) promised this video on air."
+    }
+  ],
+  "nearestExistingVideos": [
+    {
+      "id": "8Ly9jq3sbpE",
+      "title": "What Is a Token?",
+      "why": "Introduced the chip/token; this video shows what the model does with chips: scores and picks."
+    },
+    {
+      "id": "KOdLEy9c8N0",
+      "title": "What Is VRAM?",
+      "why": "The previous explainer; it promised this video."
+    }
+  ],
+  "evidence": [
+    {
+      "id": "e-greedy",
+      "kind": "measured",
+      "claim": "Temperature 0, penalties off: \"Once upon a time, there was a\" -> \" young adventurer named Lily. Lily loved to explore the\". Round 1 top 5: young 29.6%, little 16.9%, curious 13.7%, very 8.5%, group 6.7% (sum 75.3%). Round 2 top: adventurer 20.8%, boy 14.4%, student 13.9%; round 3 named 99.7%; round 4 Lily 29.7%, Alex 23%; round 5 \".\" 61.9%. Same request again: identical.",
+      "file": "content/how-ai-picks-the-next-word/evidence/greedy.json",
+      "checkedAt": "2026-10-12",
+      "conditions": "qwen3.5:4b, Ollama 0.40.2, RTX 3050 Laptop 4 GB, Ryzen 7 6800HS, 16 GB RAM, Windows 11; raw completion of \"Once upon a time, there was a\", num_ctx 4096, top_logprobs 5; temperature 0, presence_penalty 0, repeat_penalty 1, seeds 1 and 2. The model's default settings use presence_penalty 1.5, which lowers chips already used (pilot.json: a temperature-0 pilot then picked a chip that was not the top score)."
+    },
+    {
+      "id": "e-sample",
+      "kind": "measured",
+      "claim": "100 one-chip draws: young 30, curious 20, little 11, 26 outside the round-1 top 5, 26 different chips: young 30, curious 20, little 11, very 10, group 3, big 3, really 2, guy 2, retired 2, furry 1, brave 1, long 1, magical 1, math 1, rule 1, talented 1, student 1, class 1, couple 1, grown 1, lovely 1, courageous 1, naughty 1, girl 1, newborn 1, boy 1.",
+      "file": "content/how-ai-picks-the-next-word/evidence/sample.json",
+      "checkedAt": "2026-10-12",
+      "conditions": "qwen3.5:4b, Ollama 0.40.2, RTX 3050 Laptop 4 GB, Ryzen 7 6800HS, 16 GB RAM, Windows 11; raw completion of \"Once upon a time, there was a\", num_ctx 4096, top_logprobs 5; temperature 1, top_k 0, top_p 1, min_p 0, penalties off, num_predict 1, seed = run number 1..100. Default settings (top_k 20, top_p 0.95) would cut the rarest candidates; not tested."
+    },
+    {
+      "id": "e-code",
+      "kind": "measured",
+      "claim": "nextword.py printed: ' young' 29.6% | ' little' 16.9% | ' curious' 13.7% | ' very' 8.5% | ' group' 6.7%",
+      "file": "content/how-ai-picks-the-next-word/evidence/code-run.json",
+      "checkedAt": "2026-10-12",
+      "conditions": "qwen3.5:4b, Ollama 0.40.2, RTX 3050 Laptop 4 GB; second of two runs (the first printed the same)"
+    },
+    {
+      "id": "e-vocab",
+      "kind": "documented",
+      "claim": "The qwen3.5 model file lists 248,320 vocabulary entries.",
+      "file": "content/how-ai-picks-the-next-word/evidence/vocab.json",
+      "checkedAt": "2026-10-12",
+      "conditions": "GGUF metadata of qwen3.5:4b, read 2026-10-05"
+    }
+  ]
+}

@@ -1,0 +1,766 @@
+{
+ "meta": {
+  "ollama": "0.40.2",
+  "model": "qwen3.5:4b",
+  "digest_details": {
+   "parent_model": "",
+   "format": "gguf",
+   "family": "qwen35",
+   "families": [
+    "qwen35",
+    "clip"
+   ],
+   "parameter_size": "4.7B",
+   "quantization_level": "Q4_K_M",
+   "runner": "llamacpp"
+  },
+  "gpu": "NVIDIA GeForce RTX 3050 Laptop GPU, 4096 MiB, 591.74",
+  "os": "Windows-10-10.0.26300-SP0",
+  "num_ctx": 4096,
+  "raw": true,
+  "top_logprobs": 5,
+  "date": "2026-10-12T00:17:53+0500"
+ },
+ "prompt": "Once upon a time, there was a",
+ "options": {
+  "temperature": 1.0,
+  "top_k": 0,
+  "top_p": 1.0,
+  "min_p": 0.0,
+  "presence_penalty": 0,
+  "repeat_penalty": 1,
+  "num_predict": 1,
+  "seed": "run number 1..N"
+ },
+ "n": 100,
+ "rows": [
+  {
+   "run": 1,
+   "seed": 1,
+   "chip": " furry",
+   "logprob": -8.070164680480957,
+   "wall_s": 0.192
+  },
+  {
+   "run": 2,
+   "seed": 2,
+   "chip": " really",
+   "logprob": -4.490766525268555,
+   "wall_s": 0.183
+  },
+  {
+   "run": 3,
+   "seed": 3,
+   "chip": " very",
+   "logprob": -2.4630491733551025,
+   "wall_s": 0.173
+  },
+  {
+   "run": 4,
+   "seed": 4,
+   "chip": " curious",
+   "logprob": -1.9908429384231567,
+   "wall_s": 0.179
+  },
+  {
+   "run": 5,
+   "seed": 5,
+   "chip": " very",
+   "logprob": -2.4630491733551025,
+   "wall_s": 0.175
+  },
+  {
+   "run": 6,
+   "seed": 6,
+   "chip": " brave",
+   "logprob": -3.1841719150543213,
+   "wall_s": 0.203
+  },
+  {
+   "run": 7,
+   "seed": 7,
+   "chip": " little",
+   "logprob": -1.778804898262024,
+   "wall_s": 0.22
+  },
+  {
+   "run": 8,
+   "seed": 8,
+   "chip": " long",
+   "logprob": -7.577716827392578,
+   "wall_s": 0.169
+  },
+  {
+   "run": 9,
+   "seed": 9,
+   "chip": " little",
+   "logprob": -1.778804898262024,
+   "wall_s": 0.197
+  },
+  {
+   "run": 10,
+   "seed": 10,
+   "chip": " little",
+   "logprob": -1.778804898262024,
+   "wall_s": 0.186
+  },
+  {
+   "run": 11,
+   "seed": 11,
+   "chip": " very",
+   "logprob": -2.4630491733551025,
+   "wall_s": 0.17
+  },
+  {
+   "run": 12,
+   "seed": 12,
+   "chip": " young",
+   "logprob": -1.2182408571243286,
+   "wall_s": 0.182
+  },
+  {
+   "run": 13,
+   "seed": 13,
+   "chip": " young",
+   "logprob": -1.2182408571243286,
+   "wall_s": 0.212
+  },
+  {
+   "run": 14,
+   "seed": 14,
+   "chip": " magical",
+   "logprob": -5.31196403503418,
+   "wall_s": 0.2
+  },
+  {
+   "run": 15,
+   "seed": 15,
+   "chip": " curious",
+   "logprob": -1.9908429384231567,
+   "wall_s": 0.189
+  },
+  {
+   "run": 16,
+   "seed": 16,
+   "chip": " little",
+   "logprob": -1.778804898262024,
+   "wall_s": 0.169
+  },
+  {
+   "run": 17,
+   "seed": 17,
+   "chip": " really",
+   "logprob": -4.490766525268555,
+   "wall_s": 0.173
+  },
+  {
+   "run": 18,
+   "seed": 18,
+   "chip": " very",
+   "logprob": -2.4630491733551025,
+   "wall_s": 0.17
+  },
+  {
+   "run": 19,
+   "seed": 19,
+   "chip": " young",
+   "logprob": -1.2182408571243286,
+   "wall_s": 0.175
+  },
+  {
+   "run": 20,
+   "seed": 20,
+   "chip": " curious",
+   "logprob": -1.9908429384231567,
+   "wall_s": 0.183
+  },
+  {
+   "run": 21,
+   "seed": 21,
+   "chip": " curious",
+   "logprob": -1.9908429384231567,
+   "wall_s": 0.176
+  },
+  {
+   "run": 22,
+   "seed": 22,
+   "chip": " math",
+   "logprob": -5.413547515869141,
+   "wall_s": 0.182
+  },
+  {
+   "run": 23,
+   "seed": 23,
+   "chip": " young",
+   "logprob": -1.2182408571243286,
+   "wall_s": 0.178
+  },
+  {
+   "run": 24,
+   "seed": 24,
+   "chip": " little",
+   "logprob": -1.778804898262024,
+   "wall_s": 0.168
+  },
+  {
+   "run": 25,
+   "seed": 25,
+   "chip": " rule",
+   "logprob": -11.056623458862305,
+   "wall_s": 0.182
+  },
+  {
+   "run": 26,
+   "seed": 26,
+   "chip": " guy",
+   "logprob": -4.550768852233887,
+   "wall_s": 0.174
+  },
+  {
+   "run": 27,
+   "seed": 27,
+   "chip": " young",
+   "logprob": -1.2182408571243286,
+   "wall_s": 0.168
+  },
+  {
+   "run": 28,
+   "seed": 28,
+   "chip": " group",
+   "logprob": -2.7069091796875,
+   "wall_s": 0.176
+  },
+  {
+   "run": 29,
+   "seed": 29,
+   "chip": " curious",
+   "logprob": -1.9908429384231567,
+   "wall_s": 0.172
+  },
+  {
+   "run": 30,
+   "seed": 30,
+   "chip": " talented",
+   "logprob": -7.374200820922852,
+   "wall_s": 0.177
+  },
+  {
+   "run": 31,
+   "seed": 31,
+   "chip": " very",
+   "logprob": -2.4630491733551025,
+   "wall_s": 0.181
+  },
+  {
+   "run": 32,
+   "seed": 32,
+   "chip": " very",
+   "logprob": -2.4630491733551025,
+   "wall_s": 0.196
+  },
+  {
+   "run": 33,
+   "seed": 33,
+   "chip": " student",
+   "logprob": -5.161791801452637,
+   "wall_s": 0.17
+  },
+  {
+   "run": 34,
+   "seed": 34,
+   "chip": " big",
+   "logprob": -4.981306076049805,
+   "wall_s": 0.183
+  },
+  {
+   "run": 35,
+   "seed": 35,
+   "chip": " young",
+   "logprob": -1.2182408571243286,
+   "wall_s": 0.177
+  },
+  {
+   "run": 36,
+   "seed": 36,
+   "chip": " very",
+   "logprob": -2.4630491733551025,
+   "wall_s": 0.182
+  },
+  {
+   "run": 37,
+   "seed": 37,
+   "chip": " group",
+   "logprob": -2.7069091796875,
+   "wall_s": 0.184
+  },
+  {
+   "run": 38,
+   "seed": 38,
+   "chip": " curious",
+   "logprob": -1.9908429384231567,
+   "wall_s": 0.172
+  },
+  {
+   "run": 39,
+   "seed": 39,
+   "chip": " class",
+   "logprob": -6.17302131652832,
+   "wall_s": 0.185
+  },
+  {
+   "run": 40,
+   "seed": 40,
+   "chip": " young",
+   "logprob": -1.2182408571243286,
+   "wall_s": 0.181
+  },
+  {
+   "run": 41,
+   "seed": 41,
+   "chip": " young",
+   "logprob": -1.2182408571243286,
+   "wall_s": 0.2
+  },
+  {
+   "run": 42,
+   "seed": 42,
+   "chip": " curious",
+   "logprob": -1.9908429384231567,
+   "wall_s": 0.207
+  },
+  {
+   "run": 43,
+   "seed": 43,
+   "chip": " young",
+   "logprob": -1.2182408571243286,
+   "wall_s": 0.18
+  },
+  {
+   "run": 44,
+   "seed": 44,
+   "chip": " young",
+   "logprob": -1.2182408571243286,
+   "wall_s": 0.18
+  },
+  {
+   "run": 45,
+   "seed": 45,
+   "chip": " little",
+   "logprob": -1.778804898262024,
+   "wall_s": 0.181
+  },
+  {
+   "run": 46,
+   "seed": 46,
+   "chip": " little",
+   "logprob": -1.778804898262024,
+   "wall_s": 0.171
+  },
+  {
+   "run": 47,
+   "seed": 47,
+   "chip": " curious",
+   "logprob": -1.9908429384231567,
+   "wall_s": 0.183
+  },
+  {
+   "run": 48,
+   "seed": 48,
+   "chip": " young",
+   "logprob": -1.2182408571243286,
+   "wall_s": 0.178
+  },
+  {
+   "run": 49,
+   "seed": 49,
+   "chip": " young",
+   "logprob": -1.2182408571243286,
+   "wall_s": 0.184
+  },
+  {
+   "run": 50,
+   "seed": 50,
+   "chip": " group",
+   "logprob": -2.7069091796875,
+   "wall_s": 0.175
+  },
+  {
+   "run": 51,
+   "seed": 51,
+   "chip": " little",
+   "logprob": -1.778804898262024,
+   "wall_s": 0.174
+  },
+  {
+   "run": 52,
+   "seed": 52,
+   "chip": " curious",
+   "logprob": -1.9908429384231567,
+   "wall_s": 0.198
+  },
+  {
+   "run": 53,
+   "seed": 53,
+   "chip": " young",
+   "logprob": -1.2182408571243286,
+   "wall_s": 0.186
+  },
+  {
+   "run": 54,
+   "seed": 54,
+   "chip": " big",
+   "logprob": -4.981306076049805,
+   "wall_s": 0.18
+  },
+  {
+   "run": 55,
+   "seed": 55,
+   "chip": " couple",
+   "logprob": -7.373041152954102,
+   "wall_s": 0.207
+  },
+  {
+   "run": 56,
+   "seed": 56,
+   "chip": " very",
+   "logprob": -2.4630491733551025,
+   "wall_s": 0.197
+  },
+  {
+   "run": 57,
+   "seed": 57,
+   "chip": " young",
+   "logprob": -1.2182408571243286,
+   "wall_s": 0.211
+  },
+  {
+   "run": 58,
+   "seed": 58,
+   "chip": " curious",
+   "logprob": -1.9908429384231567,
+   "wall_s": 0.2
+  },
+  {
+   "run": 59,
+   "seed": 59,
+   "chip": " curious",
+   "logprob": -1.9908429384231567,
+   "wall_s": 0.176
+  },
+  {
+   "run": 60,
+   "seed": 60,
+   "chip": " retired",
+   "logprob": -4.992012023925781,
+   "wall_s": 0.179
+  },
+  {
+   "run": 61,
+   "seed": 61,
+   "chip": " curious",
+   "logprob": -1.9908429384231567,
+   "wall_s": 0.171
+  },
+  {
+   "run": 62,
+   "seed": 62,
+   "chip": " young",
+   "logprob": -1.2182408571243286,
+   "wall_s": 0.179
+  },
+  {
+   "run": 63,
+   "seed": 63,
+   "chip": " young",
+   "logprob": -1.2182408571243286,
+   "wall_s": 0.174
+  },
+  {
+   "run": 64,
+   "seed": 64,
+   "chip": " retired",
+   "logprob": -4.992012023925781,
+   "wall_s": 0.173
+  },
+  {
+   "run": 65,
+   "seed": 65,
+   "chip": " curious",
+   "logprob": -1.9908429384231567,
+   "wall_s": 0.176
+  },
+  {
+   "run": 66,
+   "seed": 66,
+   "chip": " big",
+   "logprob": -4.981306076049805,
+   "wall_s": 0.171
+  },
+  {
+   "run": 67,
+   "seed": 67,
+   "chip": " grown",
+   "logprob": -8.943132400512695,
+   "wall_s": 0.182
+  },
+  {
+   "run": 68,
+   "seed": 68,
+   "chip": " young",
+   "logprob": -1.2182408571243286,
+   "wall_s": 0.171
+  },
+  {
+   "run": 69,
+   "seed": 69,
+   "chip": " young",
+   "logprob": -1.2182408571243286,
+   "wall_s": 0.168
+  },
+  {
+   "run": 70,
+   "seed": 70,
+   "chip": " young",
+   "logprob": -1.2182408571243286,
+   "wall_s": 0.176
+  },
+  {
+   "run": 71,
+   "seed": 71,
+   "chip": " lovely",
+   "logprob": -6.586755752563477,
+   "wall_s": 0.187
+  },
+  {
+   "run": 72,
+   "seed": 72,
+   "chip": " courageous",
+   "logprob": -7.853681564331055,
+   "wall_s": 0.176
+  },
+  {
+   "run": 73,
+   "seed": 73,
+   "chip": " little",
+   "logprob": -1.778804898262024,
+   "wall_s": 0.184
+  },
+  {
+   "run": 74,
+   "seed": 74,
+   "chip": " young",
+   "logprob": -1.2182408571243286,
+   "wall_s": 0.188
+  },
+  {
+   "run": 75,
+   "seed": 75,
+   "chip": " guy",
+   "logprob": -4.550768852233887,
+   "wall_s": 0.185
+  },
+  {
+   "run": 76,
+   "seed": 76,
+   "chip": " young",
+   "logprob": -1.2182408571243286,
+   "wall_s": 0.185
+  },
+  {
+   "run": 77,
+   "seed": 77,
+   "chip": " very",
+   "logprob": -2.4630491733551025,
+   "wall_s": 0.176
+  },
+  {
+   "run": 78,
+   "seed": 78,
+   "chip": " curious",
+   "logprob": -1.9908429384231567,
+   "wall_s": 0.172
+  },
+  {
+   "run": 79,
+   "seed": 79,
+   "chip": " young",
+   "logprob": -1.2182408571243286,
+   "wall_s": 0.174
+  },
+  {
+   "run": 80,
+   "seed": 80,
+   "chip": " young",
+   "logprob": -1.2182408571243286,
+   "wall_s": 0.19
+  },
+  {
+   "run": 81,
+   "seed": 81,
+   "chip": " young",
+   "logprob": -1.2182408571243286,
+   "wall_s": 0.178
+  },
+  {
+   "run": 82,
+   "seed": 82,
+   "chip": " very",
+   "logprob": -2.4630491733551025,
+   "wall_s": 0.184
+  },
+  {
+   "run": 83,
+   "seed": 83,
+   "chip": " young",
+   "logprob": -1.2182408571243286,
+   "wall_s": 0.194
+  },
+  {
+   "run": 84,
+   "seed": 84,
+   "chip": " young",
+   "logprob": -1.2182408571243286,
+   "wall_s": 0.2
+  },
+  {
+   "run": 85,
+   "seed": 85,
+   "chip": " curious",
+   "logprob": -1.9908429384231567,
+   "wall_s": 0.21
+  },
+  {
+   "run": 86,
+   "seed": 86,
+   "chip": " naughty",
+   "logprob": -5.919063568115234,
+   "wall_s": 0.197
+  },
+  {
+   "run": 87,
+   "seed": 87,
+   "chip": " curious",
+   "logprob": -1.9908429384231567,
+   "wall_s": 0.2
+  },
+  {
+   "run": 88,
+   "seed": 88,
+   "chip": " young",
+   "logprob": -1.2182408571243286,
+   "wall_s": 0.199
+  },
+  {
+   "run": 89,
+   "seed": 89,
+   "chip": " girl",
+   "logprob": -6.4037370681762695,
+   "wall_s": 0.202
+  },
+  {
+   "run": 90,
+   "seed": 90,
+   "chip": " curious",
+   "logprob": -1.9908429384231567,
+   "wall_s": 0.194
+  },
+  {
+   "run": 91,
+   "seed": 91,
+   "chip": " newborn",
+   "logprob": -9.481436729431152,
+   "wall_s": 0.202
+  },
+  {
+   "run": 92,
+   "seed": 92,
+   "chip": " curious",
+   "logprob": -1.9908429384231567,
+   "wall_s": 0.225
+  },
+  {
+   "run": 93,
+   "seed": 93,
+   "chip": " young",
+   "logprob": -1.2182408571243286,
+   "wall_s": 0.211
+  },
+  {
+   "run": 94,
+   "seed": 94,
+   "chip": " curious",
+   "logprob": -1.9908429384231567,
+   "wall_s": 0.223
+  },
+  {
+   "run": 95,
+   "seed": 95,
+   "chip": " little",
+   "logprob": -1.778804898262024,
+   "wall_s": 0.175
+  },
+  {
+   "run": 96,
+   "seed": 96,
+   "chip": " young",
+   "logprob": -1.2182408571243286,
+   "wall_s": 0.17
+  },
+  {
+   "run": 97,
+   "seed": 97,
+   "chip": " curious",
+   "logprob": -1.9908429384231567,
+   "wall_s": 0.17
+  },
+  {
+   "run": 98,
+   "seed": 98,
+   "chip": " little",
+   "logprob": -1.778804898262024,
+   "wall_s": 0.181
+  },
+  {
+   "run": 99,
+   "seed": 99,
+   "chip": " boy",
+   "logprob": -5.207728385925293,
+   "wall_s": 0.176
+  },
+  {
+   "run": 100,
+   "seed": 100,
+   "chip": " young",
+   "logprob": -1.2182408571243286,
+   "wall_s": 0.186
+  }
+ ],
+ "counts": {
+  " young": 30,
+  " curious": 20,
+  " little": 11,
+  " very": 10,
+  " group": 3,
+  " big": 3,
+  " really": 2,
+  " guy": 2,
+  " retired": 2,
+  " furry": 1,
+  " brave": 1,
+  " long": 1,
+  " magical": 1,
+  " math": 1,
+  " rule": 1,
+  " talented": 1,
+  " student": 1,
+  " class": 1,
+  " couple": 1,
+  " grown": 1,
+  " lovely": 1,
+  " courageous": 1,
+  " naughty": 1,
+  " girl": 1,
+  " newborn": 1,
+  " boy": 1
+ }
+}

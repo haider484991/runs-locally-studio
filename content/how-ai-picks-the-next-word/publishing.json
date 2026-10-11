@@ -1,0 +1,32 @@
+{
+  "slug": "how-ai-picks-the-next-word",
+  "title": "How Does AI Pick the Next Word? The Real Scores Inside a Local AI (Qwen 3.5)",
+  "privacy": "private",
+  "categoryId": "28",
+  "madeForKids": false,
+  "tags": [
+    "how does ai work",
+    "how do llms work",
+    "next word prediction",
+    "next token prediction",
+    "logprobs",
+    "ollama",
+    "local ai",
+    "qwen",
+    "ai explained",
+    "what is a token",
+    "temperature ai",
+    "python ollama",
+    "Runs Locally"
+  ],
+  "chapters": [
+    "0:00 How an AI picks the next word",
+    "0:17 The real scores",
+    "0:33 Every chip gets a score",
+    "1:00 Score, pick, add, repeat",
+    "1:30 100 real draws of the first word",
+    "2:06 Eight lines of Python to see the scores",
+    "2:30 Recap"
+  ],
+  "description": "How does an AI pick the next word? It gives a score to every chip (token) it could write next, picks one, adds it to the sentence, and repeats. These are the real scores from a small AI (qwen3.5:4b in Ollama) running on my laptop with a 4 GB graphics card: for \"Once upon a time, there was a\", \"young\" gets 29.6%. I also let it draw the first word 100 times: 26 different words came out.\n\nWhat is real: every score, the 100 draws and the code output are real data from my laptop. The cursor, highlights and labels are added in post.\n\n0:00 How an AI picks the next word\n0:17 The real scores\n0:33 Every chip gets a score\n1:00 Score, pick, add, repeat\n1:30 100 real draws of the first word\n2:06 Eight lines of Python to see the scores\n2:30 Recap\n\nTHE RESULTS (measured)\n- Model and runtime: qwen3.5:4b in Ollama 0.40.2, RTX 3050 Laptop GPU 4 GB, Ryzen 7 6800HS, 16 GB RAM, Windows 11. Plain text in (\"raw\" mode, no chat wrapper), context 4,096. Scores = Ollama's logprobs turned into percent (100 x e to the log prob), top 5 per step.\n- First chip after \"Once upon a time, there was a\": young 29.6%, little 16.9%, curious 13.7%, very 8.5%, group 6.7%. Together about 75% (75.3% before rounding); all other chips share the rest.\n- Always taking the top score (temperature 0, presence and repeat penalties off), five rounds wrote \"young adventurer named Lily.\" Round by round: 1) young 29.6%, 2) adventurer 20.8%, 3) named 99.7%, 4) Lily 29.7%, 5) \".\" 61.9%. The same request twice gave the same chips.\n- 100 draws of the first chip (temperature 1, no top-k or top-p cut, penalties off, seed = run number 1 to 100): young 30, curious 20, little 11 (the other 26 of the 100 draws went to words outside the top five). 26 different words in total: young 30, curious 20, little 11, very 10, group 3, big 3, really 2, guy 2, retired 2, furry 1, brave 1, long 1, magical 1, math 1, rule 1, talented 1, student 1, class 1, couple 1, grown 1, lovely 1, courageous 1, naughty 1, girl 1, newborn 1, boy 1.\n- The model file lists 248,320 chips (its vocabulary), read from its metadata.\n\nTHE CODE (real run)\nimport math, requests\njob = {\"model\": \"qwen3.5:4b\", \"prompt\": \"Once upon a time, there was a\",\n       \"raw\": True, \"stream\": False, \"logprobs\": True, \"top_logprobs\": 5,\n       \"options\": {\"num_predict\": 1, \"temperature\": 0}}\nr = requests.post(\"http://localhost:11434/api/generate\", json=job).json()\nfor chip in r[\"logprobs\"][0][\"top_logprobs\"]:\n    score = 100 * math.exp(chip[\"logprob\"])\n    print(repr(chip[\"token\"]), f\"{score:.1f}%\")\n\nOutput:\n' young' 29.6%\n' little' 16.9%\n' curious' 13.7%\n' very' 8.5%\n' group' 6.7%\n\nTo try it: install Ollama, pull qwen3.5:4b, pip install requests, save the lines above as nextword.py and run it. \"logprobs\" and \"top_logprobs\" are Ollama API fields (see Ollama's API documentation; this ran on Ollama 0.40.2).\n\nLIMITS: one model (qwen3.5:4b), one laptop, one prompt, plain text without the chat wrapper. A chat app wraps your message and uses its own settings; this model's default settings in Ollama 0.40.2 are presence_penalty 1.5, temperature 1, top_k 20, top_p 0.95 (read with ollama show); the presence penalty lowers chips that were already used. I switched the penalties and cuts off so the draws follow the scores; with the defaults, at most 20 different words could come out. Even at temperature 0 the default presence penalty can skip the top score: with it on, my sentence became \"young adventurer named Lily. One day, she decided\" instead of \"Lily loved to explore the\". I turned it off for the five rounds. 100 draws is a small sample, so the counts wobble around the scores (curious came out more often than little this time). Other models give other scores. \"Chip\" is my word for a token.\n\nClaude Code built the animation and ran the measurements. The narration is an AI voice (Kokoro).\n\nPrevious: what is VRAM https://youtu.be/KOdLEy9c8N0\nNext: what temperature does to an AI's answers."
+}

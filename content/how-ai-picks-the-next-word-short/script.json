@@ -1,0 +1,47 @@
+{
+  "version": 2,
+  "format": "explainer",
+  "endScreenSeconds": 5,
+  "slug": "how-ai-picks-the-next-word-short",
+  "title": "How Does AI Pick the Next Word? 100 Real Draws, 26 Different Words #Shorts",
+  "mood": {
+    "palette": "violet",
+    "backdrop": "grid",
+    "type": "grotesk",
+    "transition": "iris",
+    "shapes": "glass",
+    "texture": "none"
+  },
+  "beats": [
+    {
+      "id": "s1",
+      "narration": "Once upon a time, there was a... How does an AI pick the next word? It gives a score to every chip it could write next: a word, or a piece of one. These are real scores from a small AI on my laptop: young gets about thirty percent.",
+      "visual": {
+        "type": "short",
+        "headline": "How AI picks the next word",
+        "sub": "real scores from qwen3.5:4b on a 4 GB laptop (Ollama logprobs)",
+        "clip": "how-ai-picks-the-next-word-short/clip-scores.mp4"
+      }
+    },
+    {
+      "id": "s2",
+      "narration": "Then it draws one at random: a higher score is just a better chance. With the extra filters off, I let it draw the first word a hundred times. Young came out thirty times, and twenty-six different words came out in total.",
+      "visual": {
+        "type": "short",
+        "headline": "100 draws, 26 different words",
+        "sub": "real draws, temperature 1, filters and penalties off",
+        "clip": "how-ai-picks-the-next-word-short/clip-draws.mp4"
+      }
+    },
+    {
+      "id": "s3",
+      "narration": "Score, pick, add, repeat: that is how an AI writes. The full explanation, with the code, is on the channel.",
+      "visual": {
+        "type": "short",
+        "headline": "Score. Pick. Repeat.",
+        "sub": "the full explanation with real data and code is on the channel",
+        "end": true
+      }
+    }
+  ]
+}

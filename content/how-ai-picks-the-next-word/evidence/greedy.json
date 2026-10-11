@@ -1,0 +1,298 @@
+{
+ "meta": {
+  "ollama": "0.40.2",
+  "model": "qwen3.5:4b",
+  "digest_details": {
+   "parent_model": "",
+   "format": "gguf",
+   "family": "qwen35",
+   "families": [
+    "qwen35",
+    "clip"
+   ],
+   "parameter_size": "4.7B",
+   "quantization_level": "Q4_K_M",
+   "runner": "llamacpp"
+  },
+  "gpu": "NVIDIA GeForce RTX 3050 Laptop GPU, 4096 MiB, 591.74",
+  "os": "Windows-10-10.0.26300-SP0",
+  "num_ctx": 4096,
+  "raw": true,
+  "top_logprobs": 5,
+  "date": "2026-10-12T00:17:50+0500"
+ },
+ "prompt": "Once upon a time, there was a",
+ "options": {
+  "temperature": 0,
+  "presence_penalty": 0,
+  "repeat_penalty": 1,
+  "num_predict": 10
+ },
+ "response": " young adventurer named Lily. Lily loved to explore the",
+ "steps": [
+  {
+   "chosen": " young",
+   "logprob": -1.2182408571243286,
+   "top": [
+    {
+     "token": " young",
+     "logprob": -1.2182408571243286
+    },
+    {
+     "token": " little",
+     "logprob": -1.778804898262024
+    },
+    {
+     "token": " curious",
+     "logprob": -1.9908429384231567
+    },
+    {
+     "token": " very",
+     "logprob": -2.4630491733551025
+    },
+    {
+     "token": " group",
+     "logprob": -2.7069091796875
+    }
+   ]
+  },
+  {
+   "chosen": " adventurer",
+   "logprob": -1.5695291757583618,
+   "top": [
+    {
+     "token": " adventurer",
+     "logprob": -1.5695291757583618
+    },
+    {
+     "token": " boy",
+     "logprob": -1.9394937753677368
+    },
+    {
+     "token": " student",
+     "logprob": -1.9728361368179321
+    },
+    {
+     "token": " and",
+     "logprob": -2.2427165508270264
+    },
+    {
+     "token": " girl",
+     "logprob": -2.7733218669891357
+    }
+   ]
+  },
+  {
+   "chosen": " named",
+   "logprob": -0.0028727748431265354,
+   "top": [
+    {
+     "token": " named",
+     "logprob": -0.0028727748431265354
+    },
+    {
+     "token": " who",
+     "logprob": -6.080643177032471
+    },
+    {
+     "token": " called",
+     "logprob": -8.166051864624023
+    },
+    {
+     "token": " in",
+     "logprob": -10.074573516845703
+    },
+    {
+     "token": ",",
+     "logprob": -10.243370056152344
+    }
+   ]
+  },
+  {
+   "chosen": " Lily",
+   "logprob": -1.214836597442627,
+   "top": [
+    {
+     "token": " Lily",
+     "logprob": -1.214836597442627
+    },
+    {
+     "token": " Alex",
+     "logprob": -1.468742847442627
+    },
+    {
+     "token": " Tom",
+     "logprob": -1.6143383979797363
+    },
+    {
+     "token": " Jack",
+     "logprob": -1.9472870826721191
+    },
+    {
+     "token": " Tim",
+     "logprob": -2.7354884147644043
+    }
+   ]
+  },
+  {
+   "chosen": ".",
+   "logprob": -0.48001471161842346,
+   "top": [
+    {
+     "token": ".",
+     "logprob": -0.48001471161842346
+    },
+    {
+     "token": " who",
+     "logprob": -0.9856299757957458
+    },
+    {
+     "token": ",",
+     "logprob": -5.641654968261719
+    },
+    {
+     "token": " in",
+     "logprob": -6.5574493408203125
+    },
+    {
+     "token": "!",
+     "logprob": -7.092794418334961
+    }
+   ]
+  },
+  {
+   "chosen": " Lily",
+   "logprob": -0.2920517921447754,
+   "top": [
+    {
+     "token": " Lily",
+     "logprob": -0.2920517921447754
+    },
+    {
+     "token": " One",
+     "logprob": -1.4948830604553223
+    },
+    {
+     "token": " She",
+     "logprob": -4.180269718170166
+    },
+    {
+     "token": " In",
+     "logprob": -5.383373737335205
+    },
+    {
+     "token": "\n",
+     "logprob": -5.5406670570373535
+    }
+   ]
+  },
+  {
+   "chosen": " loved",
+   "logprob": -0.5613529682159424,
+   "top": [
+    {
+     "token": " loved",
+     "logprob": -0.5613529682159424
+    },
+    {
+     "token": " was",
+     "logprob": -1.4332362413406372
+    },
+    {
+     "token": " had",
+     "logprob": -2.156104326248169
+    },
+    {
+     "token": " lived",
+     "logprob": -2.801623582839966
+    },
+    {
+     "token": " always",
+     "logprob": -5.678742408752441
+    }
+   ]
+  },
+  {
+   "chosen": " to",
+   "logprob": -0.5425060987472534,
+   "top": [
+    {
+     "token": " to",
+     "logprob": -0.5425060987472534
+    },
+    {
+     "token": " exploring",
+     "logprob": -1.321745753288269
+    },
+    {
+     "token": " all",
+     "logprob": -3.547632932662964
+    },
+    {
+     "token": " learning",
+     "logprob": -3.839573860168457
+    },
+    {
+     "token": " math",
+     "logprob": -3.9145305156707764
+    }
+   ]
+  },
+  {
+   "chosen": " explore",
+   "logprob": -0.2928881049156189,
+   "top": [
+    {
+     "token": " explore",
+     "logprob": -0.2928881049156189
+    },
+    {
+     "token": " learn",
+     "logprob": -1.9259963035583496
+    },
+    {
+     "token": " go",
+     "logprob": -3.516467571258545
+    },
+    {
+     "token": " discover",
+     "logprob": -3.699489116668701
+    },
+    {
+     "token": " read",
+     "logprob": -4.167850017547607
+    }
+   ]
+  },
+  {
+   "chosen": " the",
+   "logprob": -0.5001729726791382,
+   "top": [
+    {
+     "token": " the",
+     "logprob": -0.5001729726791382
+    },
+    {
+     "token": " and",
+     "logprob": -1.9061521291732788
+    },
+    {
+     "token": " all",
+     "logprob": -2.256028652191162
+    },
+    {
+     "token": " new",
+     "logprob": -2.7091381549835205
+    },
+    {
+     "token": " different",
+     "logprob": -4.05396032333374
+    }
+   ]
+  }
+ ],
+ "repeat_response": " young adventurer named Lily. Lily loved to explore the",
+ "repeat_identical": true,
+ "eval_count": 10,
+ "eval_duration_ns": 802516000
+}

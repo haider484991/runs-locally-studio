@@ -1,0 +1,1622 @@
+{
+ "meta": {
+  "ollama": "0.40.2",
+  "model": "qwen3.5:4b",
+  "digest_details": {
+   "parent_model": "",
+   "format": "gguf",
+   "family": "qwen35",
+   "families": [
+    "qwen35",
+    "clip"
+   ],
+   "parameter_size": "4.7B",
+   "quantization_level": "Q4_K_M",
+   "runner": "llamacpp"
+  },
+  "gpu": "NVIDIA GeForce RTX 3050 Laptop GPU, 4096 MiB, 591.74",
+  "os": "Windows-10-10.0.26300-SP0",
+  "num_ctx": 4096,
+  "raw": true,
+  "top_logprobs": 5,
+  "date": "2026-10-12T00:16:52+0500"
+ },
+ "runs": [
+  {
+   "prompt": "The capital of France is",
+   "response": " Paris.\nA. True\nB. False",
+   "steps": [
+    {
+     "chosen": " Paris",
+     "logprob": -0.7576758861541748,
+     "top": [
+      {
+       "token": " Paris",
+       "logprob": -0.7576758861541748
+      },
+      {
+       "token": " located",
+       "logprob": -2.815394163131714
+      },
+      {
+       "token": " a",
+       "logprob": -2.9364354610443115
+      },
+      {
+       "token": " known",
+       "logprob": -3.093498945236206
+      },
+      {
+       "token": " the",
+       "logprob": -3.280379056930542
+      }
+     ]
+    },
+    {
+     "chosen": ".",
+     "logprob": -0.4675544500350952,
+     "top": [
+      {
+       "token": ".",
+       "logprob": -0.4675544500350952
+      },
+      {
+       "token": ",",
+       "logprob": -1.2922061681747437
+      },
+      {
+       "token": " and",
+       "logprob": -4.076050281524658
+      },
+      {
+       "token": "\n",
+       "logprob": -4.201591968536377
+      },
+      {
+       "token": ";",
+       "logprob": -4.670923709869385
+      }
+     ]
+    },
+    {
+     "chosen": "\n",
+     "logprob": -1.3010300397872925,
+     "top": [
+      {
+       "token": "\n",
+       "logprob": -1.3010300397872925
+      },
+      {
+       "token": "\n\n",
+       "logprob": -2.263524055480957
+      },
+      {
+       "token": " The",
+       "logprob": -2.3863000869750977
+      },
+      {
+       "token": " Paris",
+       "logprob": -2.7855939865112305
+      },
+      {
+       "token": " This",
+       "logprob": -3.094583511352539
+      }
+     ]
+    },
+    {
+     "chosen": "A",
+     "logprob": -1.1665667295455933,
+     "top": [
+      {
+       "token": "A",
+       "logprob": -1.1665667295455933
+      },
+      {
+       "token": "The",
+       "logprob": -1.7223910093307495
+      },
+      {
+       "token": "In",
+       "logprob": -3.690005302429199
+      },
+      {
+       "token": "I",
+       "logprob": -3.916147232055664
+      },
+      {
+       "token": "Answer",
+       "logprob": -4.117525100708008
+      }
+     ]
+    },
+    {
+     "chosen": ".",
+     "logprob": -0.09723607450723648,
+     "top": [
+      {
+       "token": ".",
+       "logprob": -0.09723607450723648
+      },
+      {
+       "token": " city",
+       "logprob": -4.3230509757995605
+      },
+      {
+       "token": " capital",
+       "logprob": -4.852567195892334
+      },
+      {
+       "token": "\n",
+       "logprob": -5.879805088043213
+      },
+      {
+       "token": " country",
+       "logprob": -6.3622307777404785
+      }
+     ]
+    },
+    {
+     "chosen": " True",
+     "logprob": -1.1991721391677856,
+     "top": [
+      {
+       "token": " True",
+       "logprob": -1.1991721391677856
+      },
+      {
+       "token": " ",
+       "logprob": -1.8638813495635986
+      },
+      {
+       "token": " true",
+       "logprob": -3.1141035556793213
+      },
+      {
+       "token": " False",
+       "logprob": -3.338759660720825
+      },
+      {
+       "token": " Yes",
+       "logprob": -3.6644833087921143
+      }
+     ]
+    },
+    {
+     "chosen": "\n",
+     "logprob": -0.00715136481449008,
+     "top": [
+      {
+       "token": "\n",
+       "logprob": -0.00715136481449008
+      },
+      {
+       "token": " (",
+       "logprob": -6.100172519683838
+      },
+      {
+       "token": ".",
+       "logprob": -6.467278480529785
+      },
+      {
+       "token": "/",
+       "logprob": -6.990490436553955
+      },
+      {
+       "token": "\n\n",
+       "logprob": -7.653770923614502
+      }
+     ]
+    },
+    {
+     "chosen": "B",
+     "logprob": -0.0019607681315392256,
+     "top": [
+      {
+       "token": "B",
+       "logprob": -0.0019607681315392256
+      },
+      {
+       "token": "T",
+       "logprob": -6.424726486206055
+      },
+      {
+       "token": "</think>",
+       "logprob": -9.268035888671875
+      },
+      {
+       "token": "<think>",
+       "logprob": -9.737345695495605
+      },
+      {
+       "token": "C",
+       "logprob": -9.832693099975586
+      }
+     ]
+    },
+    {
+     "chosen": ".",
+     "logprob": -6.07969241173123e-06,
+     "top": [
+      {
+       "token": ".",
+       "logprob": -6.07969241173123e-06
+      },
+      {
+       "token": "。",
+       "logprob": -12.629438400268555
+      },
+      {
+       "token": "．",
+       "logprob": -14.33635425567627
+      },
+      {
+       "token": " .",
+       "logprob": -14.661059379577637
+      },
+      {
+       "token": "\n\n",
+       "logprob": -14.681445121765137
+      }
+     ]
+    },
+    {
+     "chosen": " False",
+     "logprob": -0.009680725634098053,
+     "top": [
+      {
+       "token": " False",
+       "logprob": -0.009680725634098053
+      },
+      {
+       "token": " True",
+       "logprob": -5.272521018981934
+      },
+      {
+       "token": " false",
+       "logprob": -6.070618629455566
+      },
+      {
+       "token": " Both",
+       "logprob": -7.845414161682129
+      },
+      {
+       "token": " Capital",
+       "logprob": -8.124061584472656
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "prompt": "Once upon a time, there was a",
+   "response": " young adventurer named Lily. One day, she decided",
+   "steps": [
+    {
+     "chosen": " young",
+     "logprob": -1.2182408571243286,
+     "top": [
+      {
+       "token": " young",
+       "logprob": -1.2182408571243286
+      },
+      {
+       "token": " little",
+       "logprob": -1.778804898262024
+      },
+      {
+       "token": " curious",
+       "logprob": -1.9908429384231567
+      },
+      {
+       "token": " very",
+       "logprob": -2.4630491733551025
+      },
+      {
+       "token": " group",
+       "logprob": -2.7069091796875
+      }
+     ]
+    },
+    {
+     "chosen": " adventurer",
+     "logprob": -1.5695291757583618,
+     "top": [
+      {
+       "token": " adventurer",
+       "logprob": -1.5695291757583618
+      },
+      {
+       "token": " boy",
+       "logprob": -1.9394937753677368
+      },
+      {
+       "token": " student",
+       "logprob": -1.9728361368179321
+      },
+      {
+       "token": " and",
+       "logprob": -2.2427165508270264
+      },
+      {
+       "token": " girl",
+       "logprob": -2.7733218669891357
+      }
+     ]
+    },
+    {
+     "chosen": " named",
+     "logprob": -0.0028727748431265354,
+     "top": [
+      {
+       "token": " named",
+       "logprob": -0.0028727748431265354
+      },
+      {
+       "token": " who",
+       "logprob": -6.080643177032471
+      },
+      {
+       "token": " called",
+       "logprob": -8.166051864624023
+      },
+      {
+       "token": " in",
+       "logprob": -10.074573516845703
+      },
+      {
+       "token": ",",
+       "logprob": -10.243370056152344
+      }
+     ]
+    },
+    {
+     "chosen": " Lily",
+     "logprob": -1.214836597442627,
+     "top": [
+      {
+       "token": " Lily",
+       "logprob": -1.214836597442627
+      },
+      {
+       "token": " Alex",
+       "logprob": -1.468742847442627
+      },
+      {
+       "token": " Tom",
+       "logprob": -1.6143383979797363
+      },
+      {
+       "token": " Jack",
+       "logprob": -1.9472870826721191
+      },
+      {
+       "token": " Tim",
+       "logprob": -2.7354884147644043
+      }
+     ]
+    },
+    {
+     "chosen": ".",
+     "logprob": -0.48001471161842346,
+     "top": [
+      {
+       "token": ".",
+       "logprob": -0.48001471161842346
+      },
+      {
+       "token": " who",
+       "logprob": -0.9856299757957458
+      },
+      {
+       "token": ",",
+       "logprob": -5.641654968261719
+      },
+      {
+       "token": " in",
+       "logprob": -6.5574493408203125
+      },
+      {
+       "token": "!",
+       "logprob": -7.092794418334961
+      }
+     ]
+    },
+    {
+     "chosen": " One",
+     "logprob": -1.4948830604553223,
+     "top": [
+      {
+       "token": " Lily",
+       "logprob": -0.2920517921447754
+      },
+      {
+       "token": " One",
+       "logprob": -1.4948830604553223
+      },
+      {
+       "token": " She",
+       "logprob": -4.180269718170166
+      },
+      {
+       "token": " In",
+       "logprob": -5.383373737335205
+      },
+      {
+       "token": "\n",
+       "logprob": -5.5406670570373535
+      }
+     ]
+    },
+    {
+     "chosen": " day",
+     "logprob": -0.11573518067598343,
+     "top": [
+      {
+       "token": " day",
+       "logprob": -0.11573518067598343
+      },
+      {
+       "token": " sunny",
+       "logprob": -2.3565914630889893
+      },
+      {
+       "token": " fine",
+       "logprob": -5.459231376647949
+      },
+      {
+       "token": " morning",
+       "logprob": -5.5167646408081055
+      },
+      {
+       "token": " afternoon",
+       "logprob": -5.9593095779418945
+      }
+     ]
+    },
+    {
+     "chosen": ",",
+     "logprob": -0.0015703246463090181,
+     "top": [
+      {
+       "token": ",",
+       "logprob": -0.0015703246463090181
+      },
+      {
+       "token": " while",
+       "logprob": -7.656357288360596
+      },
+      {
+       "token": " in",
+       "logprob": -7.811121463775635
+      },
+      {
+       "token": " Lily",
+       "logprob": -8.404339790344238
+      },
+      {
+       "token": " on",
+       "logprob": -8.45478343963623
+      }
+     ]
+    },
+    {
+     "chosen": " she",
+     "logprob": -1.1866393089294434,
+     "top": [
+      {
+       "token": " Lily",
+       "logprob": -0.5809245705604553
+      },
+      {
+       "token": " she",
+       "logprob": -1.1866393089294434
+      },
+      {
+       "token": " while",
+       "logprob": -2.189696788787842
+      },
+      {
+       "token": " in",
+       "logprob": -5.027852535247803
+      },
+      {
+       "token": " as",
+       "logprob": -5.094857692718506
+      }
+     ]
+    },
+    {
+     "chosen": " decided",
+     "logprob": -1.0361601114273071,
+     "top": [
+      {
+       "token": " decided",
+       "logprob": -1.0361601114273071
+      },
+      {
+       "token": " found",
+       "logprob": -1.7647615671157837
+      },
+      {
+       "token": " discovered",
+       "logprob": -2.3550610542297363
+      },
+      {
+       "token": " went",
+       "logprob": -2.442139148712158
+      },
+      {
+       "token": " was",
+       "logprob": -2.8755688667297363
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "prompt": "My favourite food is",
+   "response": " pizza. I like to eat it with a cold",
+   "steps": [
+    {
+     "chosen": " pizza",
+     "logprob": -2.076129913330078,
+     "top": [
+      {
+       "token": " pizza",
+       "logprob": -2.076129913330078
+      },
+      {
+       "token": " a",
+       "logprob": -3.1072158813476562
+      },
+      {
+       "token": " chicken",
+       "logprob": -3.366314172744751
+      },
+      {
+       "token": " pasta",
+       "logprob": -3.471835136413574
+      },
+      {
+       "token": " sushi",
+       "logprob": -3.6247599124908447
+      }
+     ]
+    },
+    {
+     "chosen": ".",
+     "logprob": -0.4032774567604065,
+     "top": [
+      {
+       "token": ".",
+       "logprob": -0.4032774567604065
+      },
+      {
+       "token": ",",
+       "logprob": -2.2831411361694336
+      },
+      {
+       "token": " because",
+       "logprob": -3.1227941513061523
+      },
+      {
+       "token": " and",
+       "logprob": -3.783236503601074
+      },
+      {
+       "token": ".\\",
+       "logprob": -4.104140281677246
+      }
+     ]
+    },
+    {
+     "chosen": " I",
+     "logprob": -1.6859495639801025,
+     "top": [
+      {
+       "token": " I",
+       "logprob": -1.6859495639801025
+      },
+      {
+       "token": "\n",
+       "logprob": -1.8851702213287354
+      },
+      {
+       "token": " It",
+       "logprob": -2.094001054763794
+      },
+      {
+       "token": " My",
+       "logprob": -2.966554880142212
+      },
+      {
+       "token": " What",
+       "logprob": -3.272911310195923
+      }
+     ]
+    },
+    {
+     "chosen": " like",
+     "logprob": -1.4392743110656738,
+     "top": [
+      {
+       "token": " like",
+       "logprob": -1.4392743110656738
+      },
+      {
+       "token": " love",
+       "logprob": -1.676003098487854
+      },
+      {
+       "token": " eat",
+       "logprob": -3.0411458015441895
+      },
+      {
+       "token": " have",
+       "logprob": -3.397251605987549
+      },
+      {
+       "token": " usually",
+       "logprob": -3.4288413524627686
+      }
+     ]
+    },
+    {
+     "chosen": " to",
+     "logprob": -1.4928652048110962,
+     "top": [
+      {
+       "token": " to",
+       "logprob": -1.4928652048110962
+      },
+      {
+       "token": " it",
+       "logprob": -1.6385540962219238
+      },
+      {
+       "token": " pizza",
+       "logprob": -2.007509708404541
+      },
+      {
+       "token": " the",
+       "logprob": -2.126023769378662
+      },
+      {
+       "token": " eating",
+       "logprob": -3.0100302696228027
+      }
+     ]
+    },
+    {
+     "chosen": " eat",
+     "logprob": -0.5234723687171936,
+     "top": [
+      {
+       "token": " eat",
+       "logprob": -0.5234723687171936
+      },
+      {
+       "token": " have",
+       "logprob": -2.6158108711242676
+      },
+      {
+       "token": " order",
+       "logprob": -2.8905186653137207
+      },
+      {
+       "token": " make",
+       "logprob": -3.3459858894348145
+      },
+      {
+       "token": " add",
+       "logprob": -3.4167561531066895
+      }
+     ]
+    },
+    {
+     "chosen": " it",
+     "logprob": -0.6240612268447876,
+     "top": [
+      {
+       "token": " it",
+       "logprob": -0.6240612268447876
+      },
+      {
+       "token": " pizza",
+       "logprob": -1.4998679161071777
+      },
+      {
+       "token": " a",
+       "logprob": -3.488950252532959
+      },
+      {
+       "token": " ______",
+       "logprob": -3.7599263191223145
+      },
+      {
+       "token": " the",
+       "logprob": -4.654776096343994
+      }
+     ]
+    },
+    {
+     "chosen": " with",
+     "logprob": -1.1368637084960938,
+     "top": [
+      {
+       "token": " with",
+       "logprob": -1.1368637084960938
+      },
+      {
+       "token": " for",
+       "logprob": -2.324390411376953
+      },
+      {
+       "token": " ______",
+       "logprob": -2.9946441650390625
+      },
+      {
+       "token": " at",
+       "logprob": -3.0692977905273438
+      },
+      {
+       "token": " on",
+       "logprob": -3.133190155029297
+      }
+     ]
+    },
+    {
+     "chosen": " a",
+     "logprob": -1.3552992343902588,
+     "top": [
+      {
+       "token": " a",
+       "logprob": -1.3552992343902588
+      },
+      {
+       "token": " my",
+       "logprob": -1.3846076726913452
+      },
+      {
+       "token": " friends",
+       "logprob": -2.5896637439727783
+      },
+      {
+       "token": " ______",
+       "logprob": -3.21390962600708
+      },
+      {
+       "token": " pasta",
+       "logprob": -3.719008684158325
+      }
+     ]
+    },
+    {
+     "chosen": " cold",
+     "logprob": -2.1343910694122314,
+     "top": [
+      {
+       "token": " cold",
+       "logprob": -2.1343910694122314
+      },
+      {
+       "token": " big",
+       "logprob": -2.515263557434082
+      },
+      {
+       "token": " lot",
+       "logprob": -2.6178674697875977
+      },
+      {
+       "token": " glass",
+       "logprob": -2.6504805088043213
+      },
+      {
+       "token": " fork",
+       "logprob": -2.7497360706329346
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "prompt": "The best way to learn to code is",
+   "response": " by building things.\n\nThis book will teach you",
+   "steps": [
+    {
+     "chosen": " by",
+     "logprob": -1.8070240020751953,
+     "top": [
+      {
+       "token": " to",
+       "logprob": -0.4946460723876953
+      },
+      {
+       "token": " by",
+       "logprob": -1.8070240020751953
+      },
+      {
+       "token": " through",
+       "logprob": -2.604724884033203
+      },
+      {
+       "token": " not",
+       "logprob": -4.297479629516602
+      },
+      {
+       "token": " with",
+       "logprob": -4.926532745361328
+      }
+     ]
+    },
+    {
+     "chosen": " building",
+     "logprob": -1.4754468202590942,
+     "top": [
+      {
+       "token": " building",
+       "logprob": -1.4754468202590942
+      },
+      {
+       "token": " doing",
+       "logprob": -1.5254632234573364
+      },
+      {
+       "token": " actually",
+       "logprob": -3.260343551635742
+      },
+      {
+       "token": " writing",
+       "logprob": -3.3579978942871094
+      },
+      {
+       "token": " creating",
+       "logprob": -3.414980173110962
+      }
+     ]
+    },
+    {
+     "chosen": " things",
+     "logprob": -1.380782961845398,
+     "top": [
+      {
+       "token": " things",
+       "logprob": -1.380782961845398
+      },
+      {
+       "token": " projects",
+       "logprob": -1.7764700651168823
+      },
+      {
+       "token": " real",
+       "logprob": -2.3836591243743896
+      },
+      {
+       "token": " something",
+       "logprob": -2.409139633178711
+      },
+      {
+       "token": ".",
+       "logprob": -2.746692419052124
+      }
+     ]
+    },
+    {
+     "chosen": ".",
+     "logprob": -0.7461098432540894,
+     "top": [
+      {
+       "token": ".",
+       "logprob": -0.7461098432540894
+      },
+      {
+       "token": ",",
+       "logprob": -2.123650550842285
+      },
+      {
+       "token": "\n\n",
+       "logprob": -2.8930482864379883
+      },
+      {
+       "token": " that",
+       "logprob": -3.096806526184082
+      },
+      {
+       "token": "!",
+       "logprob": -3.128037452697754
+      }
+     ]
+    },
+    {
+     "chosen": "\n\n",
+     "logprob": -2.1562867164611816,
+     "top": [
+      {
+       "token": "\n\n",
+       "logprob": -2.1562867164611816
+      },
+      {
+       "token": "\n",
+       "logprob": -2.1615872383117676
+      },
+      {
+       "token": " This",
+       "logprob": -2.705528736114502
+      },
+      {
+       "token": " But",
+       "logprob": -2.7670140266418457
+      },
+      {
+       "token": " I",
+       "logprob": -3.226147174835205
+      }
+     ]
+    },
+    {
+     "chosen": "This",
+     "logprob": -2.7199838161468506,
+     "top": [
+      {
+       "token": "The",
+       "logprob": -2.5155045986175537
+      },
+      {
+       "token": "This",
+       "logprob": -2.7199838161468506
+      },
+      {
+       "token": "In",
+       "logprob": -2.844825506210327
+      },
+      {
+       "token": "I",
+       "logprob": -2.8582112789154053
+      },
+      {
+       "token": "But",
+       "logprob": -3.339526891708374
+      }
+     ]
+    },
+    {
+     "chosen": " book",
+     "logprob": -2.308779001235962,
+     "top": [
+      {
+       "token": " is",
+       "logprob": -1.1479398012161255
+      },
+      {
+       "token": " book",
+       "logprob": -2.308779001235962
+      },
+      {
+       "token": " course",
+       "logprob": -2.42561936378479
+      },
+      {
+       "token": " article",
+       "logprob": -3.1184656620025635
+      },
+      {
+       "token": " guide",
+       "logprob": -3.526254653930664
+      }
+     ]
+    },
+    {
+     "chosen": " will",
+     "logprob": -1.7757929563522339,
+     "top": [
+      {
+       "token": " is",
+       "logprob": -1.1386566162109375
+      },
+      {
+       "token": " will",
+       "logprob": -1.7757929563522339
+      },
+      {
+       "token": " teaches",
+       "logprob": -2.803792953491211
+      },
+      {
+       "token": ",",
+       "logprob": -3.3591232299804688
+      },
+      {
+       "token": " provides",
+       "logprob": -3.5701751708984375
+      }
+     ]
+    },
+    {
+     "chosen": " teach",
+     "logprob": -1.4703794717788696,
+     "top": [
+      {
+       "token": " teach",
+       "logprob": -1.4703794717788696
+      },
+      {
+       "token": " help",
+       "logprob": -1.6700254678726196
+      },
+      {
+       "token": " take",
+       "logprob": -2.1307244300842285
+      },
+      {
+       "token": " guide",
+       "logprob": -2.1482245922088623
+      },
+      {
+       "token": " show",
+       "logprob": -2.3245418071746826
+      }
+     ]
+    },
+    {
+     "chosen": " you",
+     "logprob": -0.026604970917105675,
+     "top": [
+      {
+       "token": " you",
+       "logprob": -0.026604970917105675
+      },
+      {
+       "token": " the",
+       "logprob": -4.892320156097412
+      },
+      {
+       "token": " Python",
+       "logprob": -6.310727596282959
+      },
+      {
+       "token": " programming",
+       "logprob": -6.665174961090088
+      },
+      {
+       "token": " your",
+       "logprob": -6.733605861663818
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "prompt": "The sky is",
+   "response": " blue.\nA. True\nB. False",
+   "steps": [
+    {
+     "chosen": " blue",
+     "logprob": -1.9972026348114014,
+     "top": [
+      {
+       "token": " blue",
+       "logprob": -1.9972026348114014
+      },
+      {
+       "token": " clear",
+       "logprob": -2.6077420711517334
+      },
+      {
+       "token": " the",
+       "logprob": -2.6828219890594482
+      },
+      {
+       "token": " dark",
+       "logprob": -2.7055251598358154
+      },
+      {
+       "token": " a",
+       "logprob": -2.876612424850464
+      }
+     ]
+    },
+    {
+     "chosen": ".",
+     "logprob": -1.246675729751587,
+     "top": [
+      {
+       "token": ".",
+       "logprob": -1.246675729751587
+      },
+      {
+       "token": " because",
+       "logprob": -1.5443460941314697
+      },
+      {
+       "token": ",",
+       "logprob": -2.1115705966949463
+      },
+      {
+       "token": " and",
+       "logprob": -2.900848627090454
+      },
+      {
+       "token": "\n",
+       "logprob": -3.7818920612335205
+      }
+     ]
+    },
+    {
+     "chosen": "\n",
+     "logprob": -1.3465156555175781,
+     "top": [
+      {
+       "token": "\n",
+       "logprob": -1.3465156555175781
+      },
+      {
+       "token": " The",
+       "logprob": -1.6044292449951172
+      },
+      {
+       "token": "\n\n",
+       "logprob": -2.765340805053711
+      },
+      {
+       "token": " It",
+       "logprob": -3.0833263397216797
+      },
+      {
+       "token": " This",
+       "logprob": -3.587007522583008
+      }
+     ]
+    },
+    {
+     "chosen": "A",
+     "logprob": -2.916703462600708,
+     "top": [
+      {
+       "token": "The",
+       "logprob": -1.5078871250152588
+      },
+      {
+       "token": "A",
+       "logprob": -2.916703462600708
+      },
+      {
+       "token": "I",
+       "logprob": -3.455094575881958
+      },
+      {
+       "token": "This",
+       "logprob": -3.768878221511841
+      },
+      {
+       "token": "It",
+       "logprob": -3.79740834236145
+      }
+     ]
+    },
+    {
+     "chosen": ".",
+     "logprob": -0.3816103935241699,
+     "top": [
+      {
+       "token": ".",
+       "logprob": -0.3816103935241699
+      },
+      {
+       "token": " person",
+       "logprob": -4.828898906707764
+      },
+      {
+       "token": ":",
+       "logprob": -4.963948726654053
+      },
+      {
+       "token": " few",
+       "logprob": -5.059978008270264
+      },
+      {
+       "token": " sky",
+       "logprob": -5.1311936378479
+      }
+     ]
+    },
+    {
+     "chosen": " True",
+     "logprob": -3.028661012649536,
+     "top": [
+      {
+       "token": " True",
+       "logprob": -3.028661012649536
+      },
+      {
+       "token": " The",
+       "logprob": -3.2059404850006104
+      },
+      {
+       "token": " A",
+       "logprob": -3.4352972507476807
+      },
+      {
+       "token": " ",
+       "logprob": -3.774881601333618
+      },
+      {
+       "token": " Fact",
+       "logprob": -3.8853790760040283
+      }
+     ]
+    },
+    {
+     "chosen": "\n",
+     "logprob": -0.06556679308414459,
+     "top": [
+      {
+       "token": "\n",
+       "logprob": -0.06556679308414459
+      },
+      {
+       "token": "/",
+       "logprob": -4.287528991699219
+      },
+      {
+       "token": ".",
+       "logprob": -4.343074798583984
+      },
+      {
+       "token": " or",
+       "logprob": -4.503080368041992
+      },
+      {
+       "token": ",",
+       "logprob": -4.994174480438232
+      }
+     ]
+    },
+    {
+     "chosen": "B",
+     "logprob": -0.0016720556886866689,
+     "top": [
+      {
+       "token": "B",
+       "logprob": -0.0016720556886866689
+      },
+      {
+       "token": "A",
+       "logprob": -7.038552761077881
+      },
+      {
+       "token": "T",
+       "logprob": -8.021878242492676
+      },
+      {
+       "token": "True",
+       "logprob": -9.182923316955566
+      },
+      {
+       "token": "C",
+       "logprob": -9.659668922424316
+      }
+     ]
+    },
+    {
+     "chosen": ".",
+     "logprob": -1.0013630344474223e-05,
+     "top": [
+      {
+       "token": ".",
+       "logprob": -1.0013630344474223e-05
+      },
+      {
+       "token": "。",
+       "logprob": -12.792134284973145
+      },
+      {
+       "token": "\n\n",
+       "logprob": -13.587611198425293
+      },
+      {
+       "token": "False",
+       "logprob": -14.034772872924805
+      },
+      {
+       "token": " False",
+       "logprob": -14.037915229797363
+      }
+     ]
+    },
+    {
+     "chosen": " False",
+     "logprob": -0.04142799600958824,
+     "top": [
+      {
+       "token": " False",
+       "logprob": -0.04142799600958824
+      },
+      {
+       "token": " True",
+       "logprob": -4.896591663360596
+      },
+      {
+       "token": " Blue",
+       "logprob": -5.55465841293335
+      },
+      {
+       "token": " false",
+       "logprob": -5.715965747833252
+      },
+      {
+       "token": " The",
+       "logprob": -5.772520542144775
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "prompt": "I opened the fridge and found a",
+   "response": " bottle of wine. I took it out, but",
+   "steps": [
+    {
+     "chosen": " bottle",
+     "logprob": -2.5566742420196533,
+     "top": [
+      {
+       "token": " bottle",
+       "logprob": -2.5566742420196533
+      },
+      {
+       "token": " can",
+       "logprob": -2.8610193729400635
+      },
+      {
+       "token": " box",
+       "logprob": -3.319709062576294
+      },
+      {
+       "token": " half",
+       "logprob": -3.4606316089630127
+      },
+      {
+       "token": " ",
+       "logprob": -3.7366459369659424
+      }
+     ]
+    },
+    {
+     "chosen": " of",
+     "logprob": -0.1101454421877861,
+     "top": [
+      {
+       "token": " of",
+       "logprob": -0.1101454421877861
+      },
+      {
+       "token": ".",
+       "logprob": -3.788713216781616
+      },
+      {
+       "token": " that",
+       "logprob": -4.168130874633789
+      },
+      {
+       "token": " labeled",
+       "logprob": -4.34901237487793
+      },
+      {
+       "token": " with",
+       "logprob": -4.525781631469727
+      }
+     ]
+    },
+    {
+     "chosen": " wine",
+     "logprob": -1.8801915645599365,
+     "top": [
+      {
+       "token": " wine",
+       "logprob": -1.8801915645599365
+      },
+      {
+       "token": " water",
+       "logprob": -2.284008741378784
+      },
+      {
+       "token": " milk",
+       "logprob": -2.7228896617889404
+      },
+      {
+       "token": " sparkling",
+       "logprob": -3.864414930343628
+      },
+      {
+       "token": " ",
+       "logprob": -3.9233615398406982
+      }
+     ]
+    },
+    {
+     "chosen": ".",
+     "logprob": -0.8429169654846191,
+     "top": [
+      {
+       "token": ".",
+       "logprob": -0.8429169654846191
+      },
+      {
+       "token": ",",
+       "logprob": -2.176243305206299
+      },
+      {
+       "token": " that",
+       "logprob": -2.4741902351379395
+      },
+      {
+       "token": " and",
+       "logprob": -2.8820481300354004
+      },
+      {
+       "token": " with",
+       "logprob": -3.194258213043213
+      }
+     ]
+    },
+    {
+     "chosen": " I",
+     "logprob": -1.2471438646316528,
+     "top": [
+      {
+       "token": " I",
+       "logprob": -1.2471438646316528
+      },
+      {
+       "token": "\n",
+       "logprob": -1.792948842048645
+      },
+      {
+       "token": " It",
+       "logprob": -2.5207414627075195
+      },
+      {
+       "token": " The",
+       "logprob": -2.673825263977051
+      },
+      {
+       "token": " What",
+       "logprob": -3.162447929382324
+      }
+     ]
+    },
+    {
+     "chosen": " took",
+     "logprob": -2.4805190563201904,
+     "top": [
+      {
+       "token": " took",
+       "logprob": -2.4805190563201904
+      },
+      {
+       "token": " poured",
+       "logprob": -2.6967761516571045
+      },
+      {
+       "token": " opened",
+       "logprob": -2.7921206951141357
+      },
+      {
+       "token": " put",
+       "logprob": -3.0584723949432373
+      },
+      {
+       "token": " drank",
+       "logprob": -3.0996522903442383
+      }
+     ]
+    },
+    {
+     "chosen": " it",
+     "logprob": -0.8857773542404175,
+     "top": [
+      {
+       "token": " it",
+       "logprob": -0.8857773542404175
+      },
+      {
+       "token": " the",
+       "logprob": -1.3323792219161987
+      },
+      {
+       "token": " a",
+       "logprob": -1.8781174421310425
+      },
+      {
+       "token": " out",
+       "logprob": -2.5528857707977295
+      },
+      {
+       "token": " one",
+       "logprob": -3.5321414470672607
+      }
+     ]
+    },
+    {
+     "chosen": " out",
+     "logprob": -0.2600930631160736,
+     "top": [
+      {
+       "token": " out",
+       "logprob": -0.2600930631160736
+      },
+      {
+       "token": " to",
+       "logprob": -2.7914154529571533
+      },
+      {
+       "token": " home",
+       "logprob": -2.949122667312622
+      },
+      {
+       "token": " and",
+       "logprob": -3.666947841644287
+      },
+      {
+       "token": " from",
+       "logprob": -4.651076793670654
+      }
+     ]
+    },
+    {
+     "chosen": ",",
+     "logprob": -1.6862245798110962,
+     "top": [
+      {
+       "token": " and",
+       "logprob": -0.7309271693229675
+      },
+      {
+       "token": ",",
+       "logprob": -1.6862245798110962
+      },
+      {
+       "token": ".",
+       "logprob": -2.1802947521209717
+      },
+      {
+       "token": " of",
+       "logprob": -2.3455779552459717
+      },
+      {
+       "token": " to",
+       "logprob": -2.9137179851531982
+      }
+     ]
+    },
+    {
+     "chosen": " but",
+     "logprob": -1.8910667896270752,
+     "top": [
+      {
+       "token": " and",
+       "logprob": -1.7848103046417236
+      },
+      {
+       "token": " but",
+       "logprob": -1.8910667896270752
+      },
+      {
+       "token": " opened",
+       "logprob": -2.571784257888794
+      },
+      {
+       "token": " put",
+       "logprob": -2.654507875442505
+      },
+      {
+       "token": " poured",
+       "logprob": -3.3308613300323486
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

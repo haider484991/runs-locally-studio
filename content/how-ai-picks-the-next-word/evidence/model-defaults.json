@@ -1,0 +1,6 @@
+{
+ "read": "2026-10-12T00:52:50+0500",
+ "ollama": "0.40.2",
+ "model": "qwen3.5:4b",
+ "parameters": "presence_penalty               1.5\ntemperature                    1\ntop_k                          20\ntop_p                          0.95"
+}

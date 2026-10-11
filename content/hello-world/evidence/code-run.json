@@ -1,0 +1,17 @@
+{
+ "file": "count-words.mjs",
+ "cmd": "node count-words.mjs",
+ "lines": [
+  "const line = \"Every picture moves when the voice says its word\";",
+  "const words = line.split(\" \");",
+  "console.log(words.length, \"words\");",
+  "const longest = [...words].sort((a, b) => b.length - a.length)[0];",
+  "console.log(\"longest:\", longest);"
+ ],
+ "stdout": [
+  "9 words",
+  "longest: picture"
+ ],
+ "node": "v22.16.0",
+ "ts": "2026-10-11T20:57:50.701Z"
+}

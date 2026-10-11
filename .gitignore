@@ -1,0 +1,11 @@
+node_modules/
+out/
+.whisper/
+__pycache__/
+*.pyc
+.env
+.DS_Store
+# Everything in public/ is generated: staged scripts, voiced audio, timings, alignment scratch, clips for Shorts.
+public/*
+!public/.gitkeep
+*.log

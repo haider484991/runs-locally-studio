@@ -1,0 +1,179 @@
+{
+  "version": 2,
+  "format": "explainer",
+  "endScreenSeconds": 6,
+  "slug": "hello-world",
+  "title": "Hello World: A Narrated Video Made From One JSON File",
+  "mood": {
+    "palette": "cyan",
+    "backdrop": "grid",
+    "type": "grotesk",
+    "transition": "iris",
+    "shapes": "glass",
+    "texture": "none"
+  },
+  "thumb": {
+    "kicker": "RUNS LOCALLY STUDIO",
+    "hero": {
+      "value": "1",
+      "label": "JSON FILE"
+    },
+    "headline": "A VIDEO\nFROM JSON",
+    "verdict": "VOICE + ANIMATION, LOCAL"
+  },
+  "beats": [
+    {
+      "id": "b01",
+      "narration": "This whole video was made from one JSON file. No camera, no editing app, no cloud. A free voice reads each line on this computer, and the pictures move when the voice says their word.",
+      "visual": {
+        "type": "title",
+        "kicker": "Hello world",
+        "headline": "A video made from one JSON file",
+        "sub": "voice, timing and animation, all on your own machine"
+      }
+    },
+    {
+      "id": "b02",
+      "narration": "Here is a real program, run on this computer. It splits one sentence into words and counts them. Run it, and it prints nine words. The longest one is picture.",
+      "visual": {
+        "type": "explain",
+        "scene": "code",
+        "title": "A real program, really run",
+        "badge": "Replay of a real run",
+        "source": "Measured . the file and its output from evidence/code-run.json (Node v22.16.0)",
+        "data": {
+          "file": "count-words.mjs",
+          "lines": [
+            "const line = \"Every picture moves when the voice says its word\";",
+            "const words = line.split(\" \");",
+            "console.log(words.length, \"words\");",
+            "const longest = [...words].sort((a, b) => b.length - a.length)[0];",
+            "console.log(\"longest:\", longest);"
+          ],
+          "lang": "js",
+          "runs": [
+            {
+              "cmd": "node count-words.mjs",
+              "out": [
+                "9 words",
+                "longest: picture"
+              ]
+            }
+          ],
+          "prompt": "$",
+          "fontSize": 34,
+          "termFontSize": 36,
+          "typeCps": 70,
+          "top": 170
+        },
+        "cues": [
+          {
+            "at": "@program",
+            "do": "focus",
+            "target": "code",
+            "label": "the file that ran"
+          },
+          {
+            "at": "@program+0",
+            "do": "line",
+            "line": 1
+          },
+          {
+            "at": "@program+6",
+            "do": "line",
+            "line": 2
+          },
+          {
+            "at": "@program+12",
+            "do": "line",
+            "line": 3
+          },
+          {
+            "at": "@program+18",
+            "do": "line",
+            "line": 4
+          },
+          {
+            "at": "@program+24",
+            "do": "line",
+            "line": 5
+          },
+          {
+            "at": "@splits",
+            "do": "focus",
+            "target": "line:2:14-29",
+            "label": "one sentence into words"
+          },
+          {
+            "at": "@splits",
+            "do": "point",
+            "target": "line:2:19-24"
+          },
+          {
+            "at": "@counts",
+            "do": "focus",
+            "target": "line:3:12-24"
+          },
+          {
+            "at": "@run",
+            "do": "run",
+            "run": 0
+          },
+          {
+            "at": "@run",
+            "do": "focus",
+            "target": null
+          },
+          {
+            "at": "@nine",
+            "do": "focus",
+            "target": "out:0:0",
+            "label": "its real output",
+            "pad": 14
+          },
+          {
+            "at": "@nine",
+            "do": "point",
+            "target": "out:0:0:0-1"
+          },
+          {
+            "at": "@picture",
+            "do": "point",
+            "target": "out:0:1:9-16"
+          }
+        ]
+      }
+    },
+    {
+      "id": "b03",
+      "narration": "Each scene in the file is data plus cues. A cue names a spoken word, and the cursor or the highlight arrives exactly when the voice says it. Change the words, voice it again, and every cue moves with them.",
+      "visual": {
+        "type": "list",
+        "headline": "How a scene knows when to move",
+        "items": [
+          "The script names a spoken word: \"@program\"",
+          "Whisper measures when that word is said",
+          "The frame renders the cue at that moment"
+        ]
+      }
+    },
+    {
+      "id": "b04",
+      "narration": "Before anything is published, the checks run. A machine listens to every line, a contact sheet shows every scene, and each number has to come from a real file.",
+      "visual": {
+        "type": "callout",
+        "text": "Check it before you publish it",
+        "sub": "speech check, contact sheets, numbers traced to files"
+      }
+    },
+    {
+      "id": "b05",
+      "narration": "Write a script, run one command, and look at every frame. Make your own.",
+      "visual": {
+        "type": "end",
+        "series": "Runs Locally Studio",
+        "line": "Make your own: read the README"
+      }
+    }
+  ]
+}

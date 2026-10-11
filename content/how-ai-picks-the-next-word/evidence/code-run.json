@@ -1,0 +1,33 @@
+{
+ "file": "nextword.py",
+ "lines": [
+  "import math, requests",
+  "job = {\"model\": \"qwen3.5:4b\", \"prompt\": \"Once upon a time, there was a\",",
+  "       \"raw\": True, \"stream\": False, \"logprobs\": True, \"top_logprobs\": 5,",
+  "       \"options\": {\"num_predict\": 1, \"temperature\": 0}}",
+  "r = requests.post(\"http://localhost:11434/api/generate\", json=job).json()",
+  "for chip in r[\"logprobs\"][0][\"top_logprobs\"]:",
+  "    score = 100 * math.exp(chip[\"logprob\"])",
+  "    print(repr(chip[\"token\"]), f\"{score:.1f}%\")"
+ ],
+ "cmd": "py nextword.py",
+ "exit": 0,
+ "stdout": [
+  "' young' 29.6%",
+  "' little' 16.9%",
+  "' curious' 13.7%",
+  "' very' 8.5%",
+  "' group' 6.7%"
+ ],
+ "firstRunStdout": [
+  "' young' 29.6%",
+  "' little' 16.9%",
+  "' curious' 13.7%",
+  "' very' 8.5%",
+  "' group' 6.7%"
+ ],
+ "stderr": "",
+ "seconds": 2.64,
+ "python_and_requests": "3.11.9 2.34.2",
+ "ts": "2026-10-11T19:18:27.563Z"
+}
